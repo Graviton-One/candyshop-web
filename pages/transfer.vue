@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
-
-    1231
-
+  <div class="">
+    <div class="rounded-[18px]" style="box-shadow: 0 1px 25px #E2F1F6;">
+123
+    </div>
   </div>
 </template>
 
@@ -10,6 +10,5 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  layout: 'landing'
 })
 </script>

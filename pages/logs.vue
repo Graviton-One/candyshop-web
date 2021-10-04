@@ -1,8 +1,6 @@
 <template>
-  <div class="container">
-
-    1231
-
+  <div class="">
+    123
   </div>
 </template>
 
@@ -10,6 +8,5 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  layout: 'landing'
 })
 </script>
