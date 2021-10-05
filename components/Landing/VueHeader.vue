@@ -16,7 +16,7 @@
           type="button"
           class="
             absolute
-            top-[19px]
+            top-[8px]
             right-0
             bg-transparent
             border-none
