@@ -1,35 +1,53 @@
 <template>
-  <header class="flex-shrink-0 py-4 xl:py-[36px]">
-    <div class="container block sm:flex flex-row items-center">
-      <div class="lg:w-[150px] flex sm:block justify-between mr-auto">
-        <nuxt-link to="/" class="text-[46px] sm:text-[76px]">
-          <img src="~/assets/img/logo.svg" class="w-[1em] h-[1em]" alt="Susy" width="76" height="76">
+  <header class="py-[16px] xl:pt-[53px] xl:pb-[78px]">
+    <div class="relative container xl:flex justify-center items-center">
+      <div class="relative xl:static flex justify-center items-center">
+        <nuxt-link to="/" class="2xl:absolute left-[-60px] top-[-24px]">
+          <img
+            src="~/assets/img/logo.svg"
+            class="w-[134px] h-[79px]"
+            alt="Candy Shop"
+            width="134"
+            height="79"
+          />
         </nuxt-link>
-        <button type="button" class="bg-transparent border-none text-magenta hover:text-maastricht-blue sm:hidden -my-1"
-                :class="{'opacity-0': open}"
-                @click="toggleMenu">
-          <icon name="mono/menu" class="text-[52px] fill-current stroke-current" />
+
+        <button
+          type="button"
+          class="
+            absolute
+            top-[19px]
+            right-0
+            bg-transparent
+            border-none
+            text-white
+            hover:text-maastricht-blue
+            xl:hidden
+            -my-1
+          "
+          :class="{ 'opacity-0': open }"
+          @click="toggleMenu"
+        >
+          <icon
+            name="mono/menu"
+            class="text-[40px] fill-current stroke-current"
+          />
         </button>
       </div>
 
-      <div class="bg-[#72979C] h-[1px] w-full sm:hidden my-[13px]"></div>
-
-      <div class="hidden sm:flex flex-row justify-end mx-[-25px] lg:w-[150px]">
+      <div class="hidden xl:flex">
         <component-link
           v-for="(item, key) in navigation"
           :key="key"
           :route="item.route"
           :href="item.href"
-          :class="{ 'underline hover:no-underline': $route.name !== item.route }"
-          class="text-maastricht-blue px-[25px] font-heading text-lg whitespace-nowrap">
+          :class="{
+            'no-underline hover:underline': $route.name !== item.route,
+          }"
+          class="px-[31px] font-bold"
+        >
           {{ item.label }}
         </component-link>
-      </div>
-      <div class="w-[50px] hidden sm:block"></div>
-      <div class="hidden sm:flex flex-row -mx-5">
-        <div v-for="(social, socialKey) in socials" :key="socialKey" class="text-xl px-5">
-          <social-link :href="social.href" :icon="social.icon" class="text-desaturated-cyan hover:text-magenta" />
-        </div>
       </div>
     </div>
   </header>
@@ -37,25 +55,22 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import ComponentLink from "~/components/ComponentLink.vue";
+import ComponentLink from '~/components/ComponentLink.vue'
 
 export default Vue.extend({
-  components: {ComponentLink},
+  components: { ComponentLink },
   computed: {
     open() {
-      return this.$store.getters["app/menu"].open;
+      return this.$store.getters['app/menu'].open
     },
     navigation() {
-      return this.$store.getters["app/menu"].landingNavigation;
+      return this.$store.getters['app/menu'].landingNavigation
     },
-    socials() {
-      return this.$store.getters["app/menu"].socials;
-    }
   },
   methods: {
     toggleMenu() {
-      this.$store.commit('app/TOGGLE_MENU');
-    }
-  }
+      this.$store.commit('app/TOGGLE_MENU')
+    },
+  },
 })
 </script>

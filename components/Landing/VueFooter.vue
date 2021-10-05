@@ -1,55 +1,70 @@
 <template>
-  <footer class="flex-shrink-0 relative pb-16 pt-8 sm:py-8">
+  <footer
+    class="
+      relative
+      pt-[52px]
+      pb-[36px]
+      lg:pt-[140px] lg:pb-[70px]
+      overflow-hidden
+    "
+  >
+    <img
+      src="~/assets/img/landing/footer-bg.png"
+      alt=""
+      class="
+        hidden
+        lg:block
+        absolute
+        left-[50%]
+        top-[13px]
+        translate-x-[-50%]
+        max-w-none
+      "
+    />
 
-    <div class="container flex flex-col sm:flex-row justify-center items-center font-heading whitespace-nowrap text-center sm:text-left">
+    <div class="relative container flex flex-col items-center">
+      <nuxt-link to="/">
+        <img
+          src="~/assets/img/logo.svg"
+          class="w-[229px] h-[135px] lg:w-[282px] lg:h-[166px]"
+          alt="Candy Shop"
+          width="229"
+          height="135"
+        />
+      </nuxt-link>
 
-      <div class="flex flex-col xl:flex-row">
-        <div class="mb-2 sm:mb-0 px-[31px]">
-          <a href="/" class="text-lg text-maastricht-blue underline hover:no-underline underline-thickness-0.5">
-            Launch APP
-          </a>
-        </div>
-        <div class="mb-2 sm:mb-0 px-[31px]">
-          <a href="/" class="text-lg text-maastricht-blue underline hover:no-underline underline-thickness-0.5">
-            Docs
-          </a>
-        </div>
-        <div class="mb-2 sm:mb-0 px-[31px]">
-          <a href="/" class="text-lg text-maastricht-blue underline hover:no-underline underline-thickness-0.5">
-            Privacy Policy
-          </a>
-        </div>
+      <div class="hidden xl:flex mt-[38px]">
+        <component-link
+          v-for="(item, key) in navigation"
+          :key="key"
+          :route="item.route"
+          :href="item.href"
+          :class="{
+            'no-underline hover:underline': $route.name !== item.route,
+          }"
+          class="px-[31px] font-bold"
+        >
+          {{ item.label }}
+        </component-link>
       </div>
-      <div class="flex flex-wrap mb-[35px] sm:mb-0 px[-14px] order-first sm:order-none mx-[-25px] sm:mx-0">
-        <div v-for="(social, socialKey) in socials" :key="socialKey" class="text-2xl px-[25px] sm:px-[17px]">
-          <social-link :href="social.href" :icon="social.icon" class="text-desaturated-cyan hover:text-magenta" />
-        </div>
-      </div>
-      <div class="flex flex-col xl:flex-row">
-        <div class="mb-2 sm:mb-0 px-[31px]">
-          <a href="/" class="text-lg text-maastricht-blue underline hover:no-underline underline-thickness-0.5">
-            Terms of Service
-          </a>
-        </div>
-        <div class="mb-2 sm:mb-0 px-[31px]">
-          <a href="mailto:info@susy.one" class="text-lg text-maastricht-blue underline hover:no-underline underline-thickness-0.5">
-            info@susy.one
-          </a>
-        </div>
-      </div>
+
+      <p class="mt-[13px] xl:mt-[31px] text-[13px] leading-[21px]">
+        ©2021 Candyshop
+      </p>
     </div>
-
   </footer>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import ComponentLink from '~/components/ComponentLink.vue'
 
 export default Vue.extend({
+  components: { ComponentLink },
   computed: {
-    socials() {
-      return this.$store.getters["app/menu"].socials;
-    }
-  }
+    navigation() {
+      return this.$store.getters['app/menu'].landingNavigation
+    },
+  },
 })
 </script>

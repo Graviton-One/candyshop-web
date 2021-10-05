@@ -1,5 +1,7 @@
 <template>
-  <div class="min-h-screen font-sans bg-body relative flex flex-col text-maastricht-blue">
+  <div
+    class="min-h-screen font-sans bg-index relative flex flex-col text-white"
+  >
     <landing-vue-header />
     <mobile-menu is-landing />
 
@@ -14,6 +16,5 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({
-})
+export default Vue.extend({})
 </script>

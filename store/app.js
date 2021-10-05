@@ -10,6 +10,22 @@ export const state = () => ({
         href: '/',
         label: 'Docs',
       },
+      {
+        href: '/',
+        label: 'Github',
+      },
+      {
+        href: '/',
+        label: 'Medium',
+      },
+      {
+        href: '/',
+        label: 'Twitter',
+      },
+      {
+        href: '/',
+        label: 'Telegram',
+      },
     ],
     navigation: [
       {
@@ -48,14 +64,14 @@ export const state = () => ({
         href: '/',
         icon: 'mono/telegram',
       },
-    ]
+    ],
   },
 })
 
 export const mutations = {
   TOGGLE_MENU(state) {
-    state.menu.open = !state.menu.open;
-  }
+    state.menu.open = !state.menu.open
+  },
 }
 
 export const getters = {
