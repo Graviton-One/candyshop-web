@@ -32,7 +32,6 @@
       :class="{
         'opacity-0': !open,
         'bg-solana2': !isLanding,
-        'bg-magenta': isLanding,
       }"
       aria-label="Close"
       @click="toggleMenu"
@@ -97,15 +96,24 @@
       ></div>
 
       <div class="flex-grow flex flex-col overflow-auto">
-        <div class="mb-auto w-full pt-[20px]">
-          <div v-for="(item, key) in navigation" :key="key" class="mb-[23px]">
-            <nuxt-link
-              :to="item.route ? { name: item.route } : item.href"
-              class="font-sans leading-none no-underline hover:underline"
-              @click.native="toggleMenu"
+        <div class="mb-auto w-full pt-[40px]">
+          <div
+            v-for="(item, key) in navigation"
+            :key="key"
+            class="block mb-[23px]"
+          >
+            <component-link
+              :route="item.route"
+              :href="item.href"
+              :disabled="item.disabled"
+              :disabled-title="item.disabledTitle"
+              :class="{
+                'no-underline hover:underline': $route.name !== item.route,
+              }"
+              class="font-bold"
             >
               {{ item.label }}
-            </nuxt-link>
+            </component-link>
           </div>
         </div>
 
@@ -188,7 +196,7 @@ export default Vue.extend({
   }
 }
 
-@media (min-width: 430px) {
+@media (min-width: 320px) {
   .mobile-menu__backdrop {
     @apply opacity-70 bg-black bg-none;
   }

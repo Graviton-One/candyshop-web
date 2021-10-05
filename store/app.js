@@ -3,7 +3,9 @@ export const state = () => ({
     open: false,
     landingNavigation: [
       {
-        route: 'logs',
+        route: '/',
+        disabled: true,
+        disabledTitle: 'coming soon',
         label: 'Launch APP',
       },
       {

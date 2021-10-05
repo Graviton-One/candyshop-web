@@ -39,6 +39,8 @@
           :key="key"
           :route="item.route"
           :href="item.href"
+          :disabled="item.disabled"
+          :disabled-title="item.disabledTitle"
           :class="{
             'no-underline hover:underline': $route.name !== item.route,
           }"
