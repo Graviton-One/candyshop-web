@@ -58,10 +58,10 @@ export const state = () => ({
         href: '/',
         icon: 'mono/medium',
       },
-      {
-        href: '/',
-        icon: 'mono/github',
-      },
+      // {
+      //   href: '/',
+      //   icon: 'mono/github',
+      // },
       {
         href: '/',
         icon: 'mono/telegram',

@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div class="text-14px text-center">
     <section class="relative mb-[42px] lg:mb-[140px] overflow-hidden">
       <img

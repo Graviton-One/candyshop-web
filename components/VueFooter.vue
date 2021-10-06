@@ -1,27 +1,44 @@
 <template>
-  <footer class="flex-shrink-0 relative py-4">
-
-    <div class="container flex flex-col sm:flex-row justify-between items-center font-heading">
-      <div class="text-[12px] order-4 sm:order-1">
-        ©susy.one 2021
+  <footer class="flex-shrink-0 relative py-4 bg-[#E7FCFF] h-[210px]">
+    <div class="container flex">
+      <div class="hidden lg:flex mr-[90px]">
+        <img src="~/assets/img/interface/logo_footer.svg" alt="">
       </div>
-      <div class="flex order-2 mb-2 sm:mb-0">
-        <div v-for="(social, socialKey) in socials" :key="socialKey" class="text-2xl px-5">
-          <social-link :href="social.href" :icon="social.icon" class="text-desaturated-cyan hover:text-magenta" />
+
+      <div class="flex">
+        <div class="flex-col mx-[45px] leading-6">
+          <p>
+            <a href="#" class="block font-medium text-sm">Info</a>
+            <a href="#" class="block text-[#7B999D] text-[13px]">About</a>
+            <a href="#" class="block text-[#7B999D] text-[13px]">Analytics charts</a>
+          </p>
+        </div>
+        <div class="flex-col mx-[45px] leading-6">
+          <p>
+            <a href="#" class="block font-medium text-sm">Resourses</a>
+            <a href="#" class="block text-[#7B999D] text-[13px]">Docs</a>
+            <a href="#" class="block text-[#7B999D] text-[13px]">FAQ</a>
+            <a href="#" class="block text-[#7B999D] text-[13px]">Blog</a>
+            <a href="#" class="block text-[#7B999D] text-[13px]">Github</a>
+          </p>
+        </div>
+        <div class="flex-col mx-[45px] leading-6">
+          <p>
+            <a href="#" class="block font-medium text-sm">Help</a>
+            <a href="#" class="block text-[#7B999D] text-[13px]">Support</a>
+          </p>
         </div>
       </div>
-      <div class="text-base order-1 sm:order-3 hidden sm:block">
-        Partners
+
+      <div class="flex  mx-[45px] mr-auto">
+        <div v-for="(social, socialKey) in socials" :key="socialKey" class="text-2xl px-5">
+          <social-link :href="social.href" :icon="social.icon" class="text-[#2400FF] hover:text-magenta" />
+        </div>
       </div>
-      <div class="order-3 sm:order-4 mb-2 sm:mb-0">
-        <a href="mailto:info@susy.one" class="text-base text-magenta underline hover:no-underline">
-          info@susy.one
-        </a>
+      <div class="flex">
+        <p class="text-[#7B999D] text-xs font-medium">© 2021 Candy Shop</p>
       </div>
     </div>
-
-    <div class="bg-solana2 h-[6px] w-full left-0 bottom-0 absolute"></div>
-    <div class="h-[6px] w-full"></div>
   </footer>
 </template>
 

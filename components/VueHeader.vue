@@ -2,16 +2,16 @@
   <header class="flex-shrink-0">
     <div class="w-full h-full" style="background: linear-gradient(267.77deg, #2CCBFF 23.15%, #FB2EFF 79.13%);">
       <div class="container block sm:flex flex-row justify-center text-white text-xs">
-        <div class="flex py-2.5 px-11">10 Farms 🚜</div>
-        <div class="flex py-2.5 px-11">20 LP Candies 🍬</div>
-        <div class="flex py-2.5 px-11">5 Chains 💈</div>
-        <div class="flex py-2.5 px-11">200 Addresses in farming 🗂</div>
+        <div class="flex py-2.5 px-5 lg:px-11">10 Farms 🚜</div>
+        <div class="flex py-2.5 px-5 lg:px-11">20 LP Candies 🍬</div>
+        <div class="flex py-2.5 px-5 lg:px-11">5 Chains 💈</div>
+        <div class="flex py-2.5 px-5 lg:px-11">200 Addresses in farming 🗂</div>
       </div>
     </div>
     <div class="block shadow ">
       <div class="container flex items-center">
         <div class="">
-          <svg class="mx-10" fill="none" height="59" viewBox="0 0 97 59" width="97"
+          <svg class="mx-2 lg:mx-10" fill="none" height="59" viewBox="0 0 97 59" width="97"
                xmlns="http://www.w3.org/2000/svg">
             <path
               d="M15.6191 6.24023C17.418 6.24023 18.9893 6.76575 20.3332 7.81677C21.6771 8.86779 22.3491 10.228 22.3491 11.8973C22.3491 12.7834 22.101 13.5151 21.6048 14.0921C21.1086 14.6691 20.4986 14.9577 19.775 14.9577C19.0513 14.9577 18.4724 14.8649 18.0382 14.6795C18.1003 14.3497 18.1313 13.9994 18.1313 13.6284C18.1106 12.3301 17.7901 11.279 17.1698 10.4753C16.5496 9.65095 15.6398 9.23877 14.4406 9.23877C13.2621 9.23877 12.1663 9.62002 11.1532 10.3826C10.5536 11.2481 10.0884 12.3816 9.75751 13.783C9.4267 15.1843 9.26132 16.5652 9.26132 17.9253C9.26132 20.1923 9.69549 22.0985 10.5639 23.6442C11.4529 25.1692 12.8279 25.9318 14.6887 25.9318C16.4048 25.9318 17.5627 25.2826 18.1623 23.9842C18.7205 22.8508 18.9996 21.3463 18.9996 19.4709C20.0541 19.4709 20.9328 19.6667 21.6358 20.0583C22.3388 20.4292 22.6903 21.0475 22.6903 21.9131C22.6903 23.9327 21.8012 25.6123 20.0231 26.9519C18.245 28.2708 16.2394 28.9303 14.0064 28.9303C11.0911 28.9303 8.87883 27.972 7.36948 26.0554C5.86012 24.1182 5.10547 21.5009 5.10547 18.2035C5.10547 14.9061 6.04624 12.093 7.92774 9.76429C9.82988 7.4149 12.3937 6.24023 15.6191 6.24023Z"
@@ -222,7 +222,7 @@
           <span class="px-5 ">Analytics charts</span>
         </div>
         <div class="flex items-center mx-4 ">
-          <span class="text-xs p-2">Balance:</span>
+          <span class="hidden lg:block text-xs p-2">Balance:</span>
           <span class="font-semibold">10 LPs</span>
           <span class="font-semibold text-gray-400">  | $186,0000</span>
         </div>
@@ -442,7 +442,7 @@
                     stroke="#161616" stroke-width="0.5" />
             </svg>
           </div>
-          <div class="flex-col px-2">
+          <div class="hidden lg:block flex-col px-2">
             <p class="block font-semibold text-xs">0xced4...sdf01a</p>
             <p class="block text-[10px]">Mainnet</p>
           </div>
@@ -451,7 +451,7 @@
           </div>
         </div>
 
-        <div class="flex w-[1px] h-8 bg-gray-400 mx-4">
+        <div class="flex w-[1px] h-8 bg-gray-400 mx-2 lg:mx-4">
 
         </div>
 
@@ -461,16 +461,13 @@
           </svg>
           <span class="text-xs border-[1px] border-gray-400 rounded-full p-1 text-center absolute w-6 h-6 top-[-14px] right-[-14px] items-center">10</span>
         </div>
-        <div class="flex w-[1px] h-8 bg-gray-400 mr-4 ml-8">
+        <div class="flex w-[1px] h-8 bg-gray-400 mr-2 ml-4 lg:mr-4 lg:ml-8">
 
         </div>
 
         <div class="flex items-center">
           Favorites
-          <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9.51125 3.05165L9.95 3.85458L10.3888 3.05166C10.6682 2.54031 11.1348 1.85373 11.8219 1.32162L11.5158 0.926301L11.8219 1.32162C12.5301 0.773204 13.3233 0.5 14.192 0.5C16.6186 0.5 18.4996 2.4813 18.4996 5.22173C18.4996 6.67618 17.9234 7.92116 16.8373 9.23354C15.7385 10.5612 14.1565 11.9134 12.1934 13.5886L12.518 13.9689L12.1934 13.5886C11.5303 14.1544 10.7767 14.7975 9.99292 15.4839L9.99274 15.4841C9.98117 15.4942 9.96614 15.5 9.95002 15.5C9.9339 15.5 9.91891 15.4942 9.90736 15.4841L9.9071 15.4839C9.12395 14.7981 8.37077 14.1553 7.70846 13.5901L7.70708 13.5889L7.70706 13.5889C5.74376 11.9136 4.16166 10.5613 3.0628 9.23359C1.97662 7.92116 1.40039 6.67617 1.40039 5.22173C1.40039 2.4813 3.28147 0.5 5.708 0.5C6.57669 0.5 7.36996 0.773204 8.07811 1.32162L8.38425 0.926301L8.07811 1.32162C8.76522 1.85374 9.23182 2.54028 9.51125 3.05165Z" stroke="#FB2EFF"/>
-          </svg>
-
+          <icon class="text-base fill-current stroke-current ml-2 text-[#FB2EFF]" name="mono/like" />
         </div>
       </div>
 
