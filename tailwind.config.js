@@ -11,12 +11,16 @@ module.exports = {
       },
     },
     extend: {
+      spacing: {
+        'header-logotype': 'max(2vw, -3.125rem)',
+      },
       fontFamily: {
         sans: ['Roboto', ...defaultTheme.fontFamily.sans],
         heading: ['Courgette', ...defaultTheme.fontFamily.sans],
+        poppins: ['Poppins', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        body: 'linear-gradient(180deg, #FFFFFF 0%, #F3FFFB 90.48%)',
+        body: '#F7F8FA',
         solana2: 'linear-gradient(269.45deg, #00FFA3 10.33%, #DC1FFF 97.14%)',
         solana: 'linear-gradient(181.16deg, #FFA9DC 1.06%, #FF0097 98.05%)',
         index:

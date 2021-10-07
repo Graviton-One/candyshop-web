@@ -1,18 +1,86 @@
+const mainTitle = "Candy Shop - buy LP tokens like candies";
+
+const shortDescription = "Buy LP tokens like candies. Enjoy the sweet compounding yield. One-click platform for multichain liquidity provision.";
+
+const url = "https://mesh.susy.one";
+
+const previewImagePath = url+"/preview.jpg";
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Candy Shop',
+    title: mainTitle,
     htmlAttrs: {
       lang: "en-US"
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Candy Shop' },
+      { hid: 'description', name: 'description', content: shortDescription },
       { name: 'format-detection', content: 'telephone=no' },
+      {
+        content: mainTitle,
+        property: "og:title"
+      },
+      {
+        content: url,
+        property: "og:url"
+      },
+      {
+        content: "Candy Shop",
+        property: "og:site_name"
+      },
+      {
+        property: "og:image",
+        content: previewImagePath
+      },
+      {
+        content: "Susy",
+        property: "twitter:site"
+      },
+      {
+        content: mainTitle,
+        property: "twitter:title"
+      },
+      {
+        property: "twitter:image",
+        content: previewImagePath
+      },
+      {
+        property: "twitter:image:src",
+        content: previewImagePath
+      },
+      {
+        property: "twitter:card",
+        content: "summary_large_image"
+      },
+      {
+        content: "all",
+        name: "robots"
+      },
+      {
+        content: "website",
+        property: "og:type"
+      },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
+      },
+      {
+        name: "apple-mobile-web-app-status-bar-style",
+        content: "black"
+      },
+      {
+        name: "apple-mobile-web-app-capable",
+        content: "yes"
+      },
+      {
+        name: "format-detection",
+        content: "email=no"
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

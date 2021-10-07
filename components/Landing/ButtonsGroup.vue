@@ -41,7 +41,8 @@
       >
     </div>
 
-    <button
+    <a
+      href="#"
       class="
         relative
         flex
@@ -81,7 +82,7 @@
         "
         >SIGN UP</span
       >
-    </button>
+    </a>
   </div>
 </template>
 

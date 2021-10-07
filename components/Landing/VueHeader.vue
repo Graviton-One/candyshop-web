@@ -2,7 +2,7 @@
   <header class="py-[16px] xl:pt-[53px] xl:pb-[78px]">
     <div class="relative container xl:flex justify-center items-center">
       <div class="relative xl:static flex justify-center items-center">
-        <nuxt-link to="/" class="xl:absolute xl:left-[-50px] xl:top-[-24px]">
+        <nuxt-link to="/" class="xl:absolute xl:left-header-logotype xl:top-[-24px]">
           <img
             src="~/assets/img/logo.svg"
             class="w-[134px] h-[79px] xl:w-[171px] xl:h-[101px]"

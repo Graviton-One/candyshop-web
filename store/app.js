@@ -9,44 +9,34 @@ export const state = () => ({
         label: 'Launch APP',
       },
       {
-        href: '/',
+        href: '#',
         label: 'Docs',
       },
       {
-        href: '/',
+        href: '#',
         label: 'Github',
       },
       {
-        href: '/',
+        href: '#',
         label: 'Medium',
       },
       {
-        href: '/',
+        href: '#',
         label: 'Twitter',
       },
       {
-        href: '/',
+        href: '#',
         label: 'Telegram',
       },
     ],
     navigation: [
       {
-        route: 'logs',
+        route: 'shop',
         label: 'Logs',
       },
       {
-        route: 'transfer',
+        route: 'product',
         label: 'Transfer',
-      },
-    ],
-    partners: [
-      {
-        href: '/',
-        label: 'Graviton',
-      },
-      {
-        href: '/',
-        label: 'Gravity',
       },
     ],
     socials: [

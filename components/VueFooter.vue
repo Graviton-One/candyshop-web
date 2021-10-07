@@ -1,5 +1,5 @@
 <template>
-  <footer class="flex-shrink-0 relative py-4 bg-[#E7FCFF] h-[210px]">
+  <footer class="flex-shrink-0 relative py-[28px] bg-[#E7FCFF] h-[210px]">
     <div class="container flex">
       <div class="hidden lg:flex mr-[90px]">
         <img src="~/assets/img/interface/logo_footer.svg" alt="CandyShop">
@@ -7,26 +7,26 @@
 
       <div class="flex">
         <div class="flex-col mx-[45px] leading-6">
-          <p>
-            <a href="#" class="block font-medium text-sm">Info</a>
-            <a href="#" class="block text-[#7B999D] text-[13px]">About</a>
-            <a href="#" class="block text-[#7B999D] text-[13px]">Analytics charts</a>
-          </p>
+          <div>
+            <div class="block font-medium text-sm">Info</div>
+            <a href="#" class="block text-[#7B999D] text-[13px] no-underline hover:underline">About</a>
+            <a href="#" class="block text-[#7B999D] text-[13px] no-underline hover:underline">Analytics charts</a>
+          </div>
         </div>
         <div class="flex-col mx-[45px] leading-6">
-          <p>
-            <a href="#" class="block font-medium text-sm">Resourses</a>
-            <a href="#" class="block text-[#7B999D] text-[13px]">Docs</a>
-            <a href="#" class="block text-[#7B999D] text-[13px]">FAQ</a>
-            <a href="#" class="block text-[#7B999D] text-[13px]">Blog</a>
-            <a href="#" class="block text-[#7B999D] text-[13px]">Github</a>
-          </p>
+          <div>
+            <div class="block font-medium text-sm">Resourses</div>
+            <a href="#" class="block text-[#7B999D] text-[13px] no-underline hover:underline">Docs</a>
+            <a href="#" class="block text-[#7B999D] text-[13px] no-underline hover:underline">FAQ</a>
+            <a href="#" class="block text-[#7B999D] text-[13px] no-underline hover:underline">Blog</a>
+            <a href="#" class="block text-[#7B999D] text-[13px] no-underline hover:underline">Github</a>
+          </div>
         </div>
         <div class="flex-col mx-[45px] leading-6">
-          <p>
-            <a href="#" class="block font-medium text-sm">Help</a>
-            <a href="#" class="block text-[#7B999D] text-[13px]">Support</a>
-          </p>
+          <div>
+            <div class="block font-medium text-sm">Help</div>
+            <a href="#" class="block text-[#7B999D] text-[13px] no-underline hover:underline">Support</a>
+          </div>
         </div>
       </div>
 
@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="flex">
-        <p class="text-[#7B999D] text-xs font-medium">© 2021 Candy Shop</p>
+        <div class="text-[#7B999D] text-xs font-medium">© 2021 Candy Shop</div>
       </div>
     </div>
   </footer>

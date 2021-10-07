@@ -144,10 +144,6 @@ export default Vue.extend({
       // @ts-ignore
       return this.$store.getters['app/menu'].landingNavigation
     },
-    partners() {
-      // @ts-ignore
-      return this.$store.getters['app/menu'].partners
-    },
     socials() {
       // @ts-ignore
       return this.$store.getters['app/menu'].socials
