@@ -22,6 +22,11 @@ export default {
       { hid: 'description', name: 'description', content: shortDescription },
       { name: 'format-detection', content: 'telephone=no' },
       {
+        name: "keywords",
+        content:
+          "blockchain, crosschain, interchain, oracles, datafeeds, waves, ethereum, bitcoin, gateways, consensus, smartcontract, ride, solidity"
+      },
+      {
         content: mainTitle,
         property: "og:title"
       },
