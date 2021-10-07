@@ -2,7 +2,7 @@
   <footer class="flex-shrink-0 relative py-4 bg-[#E7FCFF] h-[210px]">
     <div class="container flex">
       <div class="hidden lg:flex mr-[90px]">
-        <img src="~/assets/img/interface/logo_footer.svg" alt="">
+        <img src="~/assets/img/interface/logo_footer.svg" alt="CandyShop">
       </div>
 
       <div class="flex">
