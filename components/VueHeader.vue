@@ -11,7 +11,7 @@
     </div>
     <div class="block shadow ">
       <div class="container flex items-center">
-        <div class="py-3 mr-auto md:mr-0">
+        <div class="py-3 mr-auto md:mr-0 order-1">
           <svg class="mx-10"
                fill="none"
                height="59"
@@ -355,7 +355,7 @@
           </svg>
         </div>
 
-        <div class="flex font-semibold md:mr-auto ">
+        <div class="flex font-semibold md:mr-auto lg:order-2 order-3 lg:ml-0 ml-2">
           <button
             :class="{ 'opacity-0': open }"
             class="flex ml-auto text-black lg:hidden"
@@ -378,19 +378,25 @@
               }"
               :href="item.href"
               :route="item.route"
-              class="px-5">
+              class="px-5 text-[13px]">
               {{ item.label }}
             </component-link>
           </nav>
         </div>
 
-        <div class="hidden md:flex items-center">
-          <div class="flex items-center mx-4 ">
-            <span class="text-xs p-2">Balance:</span>
-            <span class="font-semibold">10 LPs</span>
-            <span class="font-semibold text-gray-400"> | $186,0000</span>
+        <div class="hidden md:flex lg:order-3 order-2 items-center">
+          <div class="flex items-center  text-xs ">
+            <span class="p-2 text-[#12161D]">Balance:</span>
+            <span class="font-semibold text-[#12161D]">10 LPs</span>
+            <span class="font-semibold text-[#12161D] text-opacity-50"> | $186,0000</span>
           </div>
-
+          <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-4 py-3 mx-4 ">
+            <icon class="text-[17px] fill-current stroke-current mx-1"
+                  name="mono/poligon"/>
+            <div class="font-bold text-[#140035]">
+              poligon
+            </div>
+          </div>
           <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] p-2 my-4">
             <div class="flex">
               <svg fill="none"
@@ -738,40 +744,6 @@
               <icon class="text-[10px] fill-current stroke-current"
                     name="mono/logout"/>
             </div>
-          </div>
-
-          <div class="flex w-[1px] h-8 bg-gray-400 mx-4">
-
-          </div>
-
-          <div class="flex relative ">
-            <svg fill="none"
-                 height="24"
-                 viewBox="0 0 28 24"
-                 width="28"
-                 xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd"
-                    d="M20.4358 8.88874L14.8853 0.743643C14.633 0.496821 14.2546 0.25 13.8761 0.25C13.4977 0.25 13.1193 0.373411 12.867 0.743643L7.31651 8.88874H1.26147C0.504587 8.88874 0 9.38239 0 10.1228V10.4931L3.15367 21.9703C3.40596 22.9576 4.41514 23.8214 5.55046 23.8214H21.9495C23.0849 23.8214 24.094 23.081 24.3463 21.9703L27.5 10.4931V10.1228C27.5 9.38239 26.9954 8.88874 26.2385 8.88874H20.4358ZM10.0917 8.88873L13.8761 3.45866L17.6605 8.88873H10.0917ZM11.3532 16.2934C11.3532 17.6509 12.4885 18.7616 13.8761 18.7616C15.2637 18.7616 16.3991 17.6509 16.3991 16.2934C16.3991 14.9359 15.2637 13.8252 13.8761 13.8252C12.4885 13.8252 11.3532 14.9359 11.3532 16.2934Z"
-                    fill="#FB2EFF"
-                    fill-rule="evenodd"/>
-            </svg>
-            <span class="text-xs border-[1px] border-gray-400 rounded-full p-1 text-center absolute w-6 h-6 top-[-14px] right-[-14px] items-center">10</span>
-          </div>
-          <div class="flex w-[1px] h-8 bg-gray-400 mr-4 ml-8">
-
-          </div>
-
-          <div class="flex items-center">
-            Favorites
-            <svg fill="none"
-                 height="16"
-                 viewBox="0 0 19 16"
-                 width="19"
-                 xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.51125 3.05165L9.95 3.85458L10.3888 3.05166C10.6682 2.54031 11.1348 1.85373 11.8219 1.32162L11.5158 0.926301L11.8219 1.32162C12.5301 0.773204 13.3233 0.5 14.192 0.5C16.6186 0.5 18.4996 2.4813 18.4996 5.22173C18.4996 6.67618 17.9234 7.92116 16.8373 9.23354C15.7385 10.5612 14.1565 11.9134 12.1934 13.5886L12.518 13.9689L12.1934 13.5886C11.5303 14.1544 10.7767 14.7975 9.99292 15.4839L9.99274 15.4841C9.98117 15.4942 9.96614 15.5 9.95002 15.5C9.9339 15.5 9.91891 15.4942 9.90736 15.4841L9.9071 15.4839C9.12395 14.7981 8.37077 14.1553 7.70846 13.5901L7.70708 13.5889L7.70706 13.5889C5.74376 11.9136 4.16166 10.5613 3.0628 9.23359C1.97662 7.92116 1.40039 6.67617 1.40039 5.22173C1.40039 2.4813 3.28147 0.5 5.708 0.5C6.57669 0.5 7.36996 0.773204 8.07811 1.32162L8.38425 0.926301L8.07811 1.32162C8.76522 1.85374 9.23182 2.54028 9.51125 3.05165Z"
-                    stroke="#FB2EFF"/>
-            </svg>
-
           </div>
         </div>
       </div>
