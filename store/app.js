@@ -77,5 +77,5 @@ export const mutations = {
 }
 
 export const getters = {
-  menu: (state) => state.menu,
+    menu: (state) => state.menu,
 }
