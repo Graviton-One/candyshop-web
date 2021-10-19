@@ -12,7 +12,11 @@
 
       <nuxt />
     </main>
-
+    <modals-connect-wallet />
+    <modals-buyLP />
+    <modals-redeem />
+    <modals-confirmRedeem />
+    <modals-select-network />
     <vue-footer />
   </div>
 </template>

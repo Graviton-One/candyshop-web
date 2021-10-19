@@ -113,8 +113,9 @@
               <div class="flex">
                 <btn block
                      rounded
-                     variant="gradient">
-                  Buy NOW
+                     variant="gradient"
+                     @click="openBuyLP">
+                  B12312312
                 </btn>
               </div>
             </div>
@@ -216,5 +217,15 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  methods: {
+    openBuyLP() {
+      // Deep copy object
+      console.log('modal')
+      const modal = JSON.parse(JSON.stringify(this.$store.getters["app/exampleModals"].buy));
+      console.log(modal)
+      this.$store.commit('app/PUSH_MODAL', modal)
+    }
+  }
+})
 </script>

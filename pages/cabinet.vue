@@ -59,7 +59,8 @@
             <td class="">
               <btn class="px-8"
                    size="medium"
-                   variant="empty">
+                   variant="empty"
+                   @click="openRedeem">
                 Redeem
               </btn>
             </td>
@@ -92,7 +93,8 @@
             <td class="">
               <btn class="px-8"
                    size="medium"
-                   variant="empty">
+                   variant="empty"
+              @click="openRedeem">
                 Redeem
               </btn>
             </td>
@@ -106,5 +108,18 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  methods: {
+    openRedeem() {
+      // Deep copy object
+      console.log('modal')
+      const modal = JSON.parse(JSON.stringify(this.$store.getters["app/exampleModals"].redeem));
+      console.log(modal)
+      modal.data.callbackRedeem = () => {
+        this.$store.commit('app/CLOSE_MODAL')
+      }
+      this.$store.commit('app/PUSH_MODAL', modal)
+    }
+  }
+})
 </script>

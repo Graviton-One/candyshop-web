@@ -15,7 +15,7 @@
               'btn--disabled': disabled,
               'btn--readonly': readonly,
              }"
-             @click="$emit('click', $event)"
+               @click="$emit('click', $event)"
   >
     <slot/>
   </component>

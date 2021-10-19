@@ -70,7 +70,10 @@
           </nuxt-link>
           <div class="flex px-10">
 
-            <!--          Место для выпадающего списка-->
+            <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-4 py-3 mx-5">
+              <img src="~/assets/img/interface/poligon.svg" width="100" height="25"
+                   alt="poligon">
+            </div>
 
           </div>
           <button
