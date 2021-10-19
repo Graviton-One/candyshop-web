@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap justify-center md:justify-between">
       <div class="flex m-[1rem] rounded-[23px] p-6 rainbow">
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
@@ -701,16 +701,16 @@
 
     <div class="flex w-full h-[1px] bg-gray-300 m-3"></div>
 
-    <div class="flex pt-8 pb-4">
-      <span class="text-2xl font-bold ">
+    <div class="flex flex-wrap pt-8 pb-4 justify-center">
+      <div class="flex text-2xl font-bold ">
         explore
-      </span>
-      <div class="ml-7 mr-auto">
-        <input class="rounded-[27px] bg-[#e6f4fc] px-5 py-[10px] w-[480px] text-xs  appearance-none outline-none"
+      </div>
+      <div class="flex ml-7  mr-auto">
+        <input class="rounded-[27px] bg-[#e6f4fc] px-5 lg:py-[10px] w-full w-[100px] md:w-[150px] lg:w-[200px] xl:w-[480px] text-xs  appearance-none outline-none"
                placeholder="search"
                type="search">
       </div>
-      <div class="flex">
+      <div class="flex py-2 lg:p-0">
         <span class="arrow relative">
           <select
             class="rounded-[27px] border-[1px] border-[#b7d2d6] text-[#12161d] text-xs p-3 w-[140px] appearance-none outline-none font-medium">
@@ -732,7 +732,7 @@
       </div>
     </div>
 
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap justify-center md:justify-between">
       <div class="flex m-[1rem] rounded-[23px] p-6 rainbow">
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">

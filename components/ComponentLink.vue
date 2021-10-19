@@ -10,8 +10,8 @@
         : 'a'
     "
     v-bind="{ [route ? 'to' : 'href']: route ? { name: route } : href }"
-    :class="disabled ? 'relative hover:no-underline' : ''"
-  >
+
+    :class="[disabled ? 'relative hover:no-underline' : '']">
     <span
       v-if="disabled && disabledTitle"
       class="
