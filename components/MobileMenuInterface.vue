@@ -131,19 +131,20 @@
 
         </div>
       </div>
-      <div class="h-full w-full text-[13px] font-sans text-sm pt-10 pl-6 mt-[50px]"
-           style="background: linear-gradient(260.18deg, #FB2EFF 24.15%, #7736FF 59.59%);">
-        <div class="flex w-full items-center">
-          <div v-for="(social, socialKey) in socials"
-               :key="socialKey"
-               class="text-2xl px-5">
-            <social-link :href="social.href"
-                         :icon="social.icon"
-                         class="text-white hover:text-magenta"/>
+      <div class="h-full w-full text-[13px] font-sans text-sm mt-[50px] relative">
+        <div class="h-[140px] w-full absolute bottom-0 pt-10 pl-6" style="background: linear-gradient(260.18deg, #FB2EFF 24.15%, #7736FF 59.59%);">
+          <div class="flex w-full items-center">
+            <div v-for="(social, socialKey) in socials"
+                 :key="socialKey"
+                 class="text-2xl px-5">
+              <social-link :href="social.href"
+                           :icon="social.icon"
+                           class="text-white hover:text-magenta"/>
+            </div>
           </div>
-        </div>
-        <div class=" items-center">
-          <p class="text-white text-xs font-medium p-5">© 2021 Candy Shop</p>
+          <div class=" items-center">
+            <div class="text-white text-xs font-medium p-5">© 2021 Candy Shop</div>
+          </div>
         </div>
       </div>
     </nav>

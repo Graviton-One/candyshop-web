@@ -127,6 +127,13 @@ export const state = () => ({
         label: 'About',
       },
       {
+        route: 'cabinet',
+        label: 'My candies',
+      },
+      {
+        disabled: true,
+        disabledTitle: 'soon',
+        interface: true,
         route: 'Analytics-charts',
         label: 'Analytics charts',
       },

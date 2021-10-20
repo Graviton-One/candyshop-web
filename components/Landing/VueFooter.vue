@@ -50,9 +50,9 @@
         </component-link>
       </div>
 
-      <p class="mt-[13px] xl:mt-[31px] text-[13px] leading-[21px]">
+      <div class="mt-[13px] xl:mt-[31px] text-[13px] leading-[21px]">
         ©2021 Candyshop
-      </p>
+      </div>
     </div>
   </footer>
 </template>

@@ -1,6 +1,18 @@
 <template>
   <div class="container">
-    <div class="flex pt-8 pb-4 px-6">
+
+    <div class="flex pt-8 pb-4 px-6 text-[10px] font-bold mr-auto items-center">
+      <a href="/" class="text-[#12161D] text-opacity-50 no-underline hover:underline">
+        Home
+      </a>
+      <icon class="text-[#12161D] text-opacity-50 text-[6px] fill-current stroke-current text-gray-600 mx-1"
+            name="mono/double-arrow"/>
+      <a href="/" class="text-[#12161D] text-opacity-50 no-underline hover:underline">
+        My candies
+      </a>
+    </div>
+
+    <div class="flex pb-4 px-6">
       <span class="text-2xl font-bold mr-auto">
         My balance 💰
       </span>
@@ -20,29 +32,41 @@
         My candies
       </span>
     </div>
-    <div class="flex rainbow p-10 rounded-[23px] mb-[53px]">
-      <div class="flex w-full overflow-x-scroll sm:overflow-auto">
-        <table class="w-full min-w-[600px]">
+    <div class="flex flex-wrap rainbow p-4 sm:p-10 rounded-[23px]  mb-[53px]">
+      <div class="flex w-full relative">
+      <div class="flex w-full pb-2  overflow-x-scroll sm:overflow-x-auto">
+        <table class="w-full min-w-[600px] mb-[70px]">
           <tr class="border-b border-[#D9DCE2] h-[70px]">
-            <th class="text-[#12161D] text-opacity-50 text-left" width="5%">#</th>
-            <th class="text-[#12161D] text-left" width="30%">LP Candies</th>
-            <th class="text-[#12161D] text-left" width="20%">APY</th>
-            <th class="text-[#12161D] text-left" width="20%">Paid</th>
-            <th class="text-[#12161D] text-left" width="20%">Received</th>
-            <th class="" width="5%"></th>
+            <th class="text-[#12161D] text-opacity-50 text-left"
+                width="5%">#
+            </th>
+            <th class="text-[#12161D] text-left"
+                width="30%">LP Candies
+            </th>
+            <th class="text-[#12161D] text-left"
+                width="20%">APY
+            </th>
+            <th class="text-[#12161D] text-left"
+                width="20%">Paid
+            </th>
+            <th class="text-[#12161D] text-left"
+                width="20%">Received
+            </th>
+            <th class=""
+                width="5%"></th>
           </tr>
           <tr class="border-b border-[#D9DCE2] h-[70px]">
             <td class="text-[#12161D] text-opacity-50">1</td>
             <td>
               <div class="flex-wrap flex items-center h-full">
                 <div class="flex px-1">
-                  <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
-                    <icon class="text-base fill-current stroke-current text-blue-900 "
+                  <div class="h-8 w-8 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2]  items-center z-20 bg-white">
+                    <icon class="text-base"
                           name="mono/gton"/>
                   </div>
-                  <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
-                    <icon class="text-base fill-current stroke-current text-blue-900 "
-                          name="mono/gton"/>
+                  <div class="h-8 w-8 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2]  items-center z-10 bg-white ml-[-7px]">
+                    <icon class="text-base"
+                          name="mono/usdc"/>
                   </div>
                 </div>
                 <div class="flex font-medium text-lg text-[#FF00F5]">
@@ -70,13 +94,13 @@
             <td>
               <div class="flex-wrap flex items-center h-full">
                 <div class="flex px-1">
-                  <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
-                    <icon class="text-base fill-current stroke-current text-blue-900 "
+                  <div class="h-8 w-8 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2]  items-center z-20 bg-white">
+                    <icon class="text-base"
                           name="mono/gton"/>
                   </div>
-                  <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
-                    <icon class="text-base fill-current stroke-current text-blue-900 "
-                          name="mono/gton"/>
+                  <div class="h-8 w-8 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2]  items-center z-10 bg-white ml-[-7px]">
+                    <icon class="text-base"
+                          name="mono/usdc"/>
                   </div>
                 </div>
                 <div class="flex font-medium text-lg text-[#FF00F5]">
@@ -94,12 +118,23 @@
               <btn class="px-8"
                    size="medium"
                    variant="empty"
-              @click="openRedeem">
+                   @click="openRedeem">
                 Redeem
               </btn>
             </td>
           </tr>
         </table>
+      </div>
+        <div class="text-[#12161D] text-opacity-50 text-sm absolute bottom-[25px]">
+          Wanna see you transactions? Go to
+          <a class="hover:no-underline underline"
+             href="/">
+            Etherscan
+            <icon class="text-base fill-current stroke-current text-[#12161D] "
+                  name="mono/goto"/>
+          </a>
+
+        </div>
       </div>
     </div>
   </div>

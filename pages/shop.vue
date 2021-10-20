@@ -22,14 +22,14 @@
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
               <span class="flex px-1">
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
+                </div>
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
+                </div>
               </span>
               <span class="font-medium text-lg">
                 lp_gton-usdc
@@ -116,39 +116,39 @@
                 </span>
               </div>
               <div class="flex-col bg-white items-center rounded-xl mx-5 my-3 p-4">
-                <p class="flex  items-center font-medium">
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     apy:
                   </span>
                   <span class="text-lg text-pink-500">
                     38.30%
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     pay:
                   </span>
                   <span class="text-lg text-blue-700">
                     $100
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     receive:
                   </span>
                   <span class="text-lg text-black">
                     38.30%
                   </span>
-                </p>
+                </div>
                 <div class="flex w-[180px] h-[1px] bg-gray-400 my-3"></div>
-                <p class="flex items-center font-medium">
+                <div class="flex items-center font-medium">
                   <span class="text-xs text-gray-400">
                     price
                   </span>
                   <span class="text-lg text-green-400">
                     +15%
                   </span>
-                </p>
+                </div>
                 <div class="flex text-gray-400 items-center">
                   <span class="flex mr-auto items-center">
                     <svg fill="none"
@@ -192,14 +192,14 @@
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
               <span class="flex px-1">
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
+                </div>
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
+                </div>
               </span>
               <span class="font-medium text-lg">
                 lp_gton-usdc
@@ -286,39 +286,39 @@
                 </span>
               </div>
               <div class="flex-col bg-white items-center rounded-xl mx-5 my-3 p-4">
-                <p class="flex  items-center font-medium">
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     apy:
                   </span>
                   <span class="text-lg text-pink-500">
                     38.30%
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     pay:
                   </span>
                   <span class="text-lg text-blue-700">
                     $100
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     receive:
                   </span>
                   <span class="text-lg text-black">
                     38.30%
                   </span>
-                </p>
+                </div>
                 <div class="flex w-[180px] h-[1px] bg-gray-400 my-3"></div>
-                <p class="flex items-center font-medium">
+                <div class="flex items-center font-medium">
                   <span class="text-xs text-gray-400">
                     price
                   </span>
                   <span class="text-lg text-green-400">
                     +15%
                   </span>
-                </p>
+                </div>
                 <div class="flex text-gray-400 items-center">
                   <span class="flex mr-auto items-center">
                     <svg fill="none"
@@ -362,14 +362,14 @@
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
               <span class="flex px-1">
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
+                </div>
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
+                </div>
               </span>
               <span class="font-medium text-lg">
                 lp_gton-usdc
@@ -456,39 +456,39 @@
                 </span>
               </div>
               <div class="flex-col bg-white items-center rounded-xl mx-5 my-3 p-4">
-                <p class="flex  items-center font-medium">
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     apy:
                   </span>
                   <span class="text-lg text-pink-500">
                     38.30%
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     pay:
                   </span>
                   <span class="text-lg text-blue-700">
                     $100
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     receive:
                   </span>
                   <span class="text-lg text-black">
                     38.30%
                   </span>
-                </p>
+                </div>
                 <div class="flex w-[180px] h-[1px] bg-gray-400 my-3"></div>
-                <p class="flex items-center font-medium">
+                <div class="flex items-center font-medium">
                   <span class="text-xs text-gray-400">
                     price
                   </span>
                   <span class="text-lg text-green-400">
                     +15%
                   </span>
-                </p>
+                </div>
                 <div class="flex text-gray-400 items-center">
                   <span class="flex mr-auto items-center">
                     <svg fill="none"
@@ -532,14 +532,14 @@
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
               <span class="flex px-1">
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
+                </div>
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
+                </div>
               </span>
               <span class="font-medium text-lg">
                 lp_gton-usdc
@@ -626,39 +626,39 @@
                 </span>
               </div>
               <div class="flex-col bg-white items-center rounded-xl mx-5 my-3 p-4">
-                <p class="flex  items-center font-medium">
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     apy:
                   </span>
                   <span class="text-lg text-pink-500">
                     38.30%
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     pay:
                   </span>
                   <span class="text-lg text-blue-700">
                     $100
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     receive:
                   </span>
                   <span class="text-lg text-black">
                     38.30%
                   </span>
-                </p>
+                </div>
                 <div class="flex w-[180px] h-[1px] bg-gray-400 my-3"></div>
-                <p class="flex items-center font-medium">
+                <div class="flex items-center font-medium">
                   <span class="text-xs text-gray-400">
                     price
                   </span>
                   <span class="text-lg text-green-400">
                     +15%
                   </span>
-                </p>
+                </div>
                 <div class="flex text-gray-400 items-center">
                   <span class="flex mr-auto items-center">
                     <svg fill="none"
@@ -738,14 +738,14 @@
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
               <span class="flex px-1">
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
+                </div>
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
+                </div>
               </span>
               <span class="font-medium text-lg">
                 lp_gton-usdc
@@ -832,39 +832,39 @@
                 </span>
               </div>
               <div class="flex-col bg-white items-center rounded-xl mx-5 my-3 p-4">
-                <p class="flex  items-center font-medium">
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     apy:
                   </span>
                   <span class="text-lg text-pink-500">
                     38.30%
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     pay:
                   </span>
                   <span class="text-lg text-blue-700">
                     $100
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     receive:
                   </span>
                   <span class="text-lg text-black">
                     38.30%
                   </span>
-                </p>
+                </div>
                 <div class="flex w-[180px] h-[1px] bg-gray-400 my-3"></div>
-                <p class="flex items-center font-medium">
+                <div class="flex items-center font-medium">
                   <span class="text-xs text-gray-400">
                     price
                   </span>
                   <span class="text-lg text-green-400">
                     +15%
                   </span>
-                </p>
+                </div>
                 <div class="flex text-gray-400 items-center">
                   <span class="flex mr-auto items-center">
                     <svg fill="none"
@@ -908,14 +908,14 @@
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
               <span class="flex px-1">
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
+                </div>
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
+                </div>
               </span>
               <span class="font-medium text-lg">
                 lp_gton-usdc
@@ -1002,39 +1002,39 @@
                 </span>
               </div>
               <div class="flex-col bg-white items-center rounded-xl mx-5 my-3 p-4">
-                <p class="flex  items-center font-medium">
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     apy:
                   </span>
                   <span class="text-lg text-pink-500">
                     38.30%
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     pay:
                   </span>
                   <span class="text-lg text-blue-700">
                     $100
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     receive:
                   </span>
                   <span class="text-lg text-black">
                     38.30%
                   </span>
-                </p>
+                </div>
                 <div class="flex w-[180px] h-[1px] bg-gray-400 my-3"></div>
-                <p class="flex items-center font-medium">
+                <div class="flex items-center font-medium">
                   <span class="text-xs text-gray-400">
                     price
                   </span>
                   <span class="text-lg text-green-400">
                     +15%
                   </span>
-                </p>
+                </div>
                 <div class="flex text-gray-400 items-center">
                   <span class="flex mr-auto items-center">
                     <svg fill="none"
@@ -1078,14 +1078,14 @@
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
               <span class="flex px-1">
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
+                </div>
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
+                </div>
               </span>
               <span class="font-medium text-lg">
                 lp_gton-usdc
@@ -1172,39 +1172,39 @@
                 </span>
               </div>
               <div class="flex-col bg-white items-center rounded-xl mx-5 my-3 p-4">
-                <p class="flex  items-center font-medium">
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     apy:
                   </span>
                   <span class="text-lg text-pink-500">
                     38.30%
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     pay:
                   </span>
                   <span class="text-lg text-blue-700">
                     $100
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     receive:
                   </span>
                   <span class="text-lg text-black">
                     38.30%
                   </span>
-                </p>
+                </div>
                 <div class="flex w-[180px] h-[1px] bg-gray-400 my-3"></div>
-                <p class="flex items-center font-medium">
+                <div class="flex items-center font-medium">
                   <span class="text-xs text-gray-400">
                     price
                   </span>
                   <span class="text-lg text-green-400">
                     +15%
                   </span>
-                </p>
+                </div>
                 <div class="flex text-gray-400 items-center">
                   <span class="flex mr-auto items-center">
                     <svg fill="none"
@@ -1248,14 +1248,14 @@
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
               <span class="flex px-1">
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
-                <p class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
+                </div>
+                <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-10 bg-white ml-[-7px]">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
-                </p>
+                </div>
               </span>
               <span class="font-medium text-lg">
                 lp_gton-usdc
@@ -1342,39 +1342,39 @@
                 </span>
               </div>
               <div class="flex-col bg-white items-center rounded-xl mx-5 my-3 p-4">
-                <p class="flex  items-center font-medium">
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     apy:
                   </span>
                   <span class="text-lg text-pink-500">
                     38.30%
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     pay:
                   </span>
                   <span class="text-lg text-blue-700">
                     $100
                   </span>
-                </p>
-                <p class="flex  items-center font-medium">
+                </div>
+                <div class="flex  items-center font-medium">
                   <span class="text-xs text-gray-400">
                     receive:
                   </span>
                   <span class="text-lg text-black">
                     38.30%
                   </span>
-                </p>
+                </div>
                 <div class="flex w-[180px] h-[1px] bg-gray-400 my-3"></div>
-                <p class="flex items-center font-medium">
+                <div class="flex items-center font-medium">
                   <span class="text-xs text-gray-400">
                     price
                   </span>
                   <span class="text-lg text-green-400">
                     +15%
                   </span>
-                </p>
+                </div>
                 <div class="flex text-gray-400 items-center">
                   <span class="flex mr-auto items-center">
                     <svg fill="none"

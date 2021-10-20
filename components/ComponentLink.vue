@@ -13,7 +13,7 @@
 
     :class="[disabled ? 'relative hover:no-underline' : '']">
     <span
-      v-if="disabled && disabledTitle"
+      v-if="disabled && disabledTitle && !interface"
       class="
         absolute
         top-0
@@ -32,8 +32,18 @@
       {{ disabledTitle }}
     </span>
 
+
     <span :class="disabled ? 'opacity-50' : ''">
-      <slot />
+      <slot/>
+    </span>
+    <span
+      v-if="disabled && disabledTitle && interface"
+      class="
+      px-1
+       text-magenta
+      "
+    >
+      {{ disabledTitle }}
     </span>
   </component>
 </template>
@@ -58,6 +68,10 @@ export default Vue.extend({
     disabledTitle: {
       type: String,
       default: '',
+    },
+    interface: {
+      type: Boolean,
+      default: false,
     },
   },
 })

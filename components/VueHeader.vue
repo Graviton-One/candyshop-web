@@ -2,14 +2,35 @@
   <header class="flex-shrink-0">
     <div class="w-full h-full"
          style="background: linear-gradient(267.77deg, #2CCBFF 23.15%, #FB2EFF 79.13%);">
-      <div class="container flex flex-row justify-center text-white text-xs">
-        <div class="flex py-3 px-4 sm:py-2.5 sm:px-11">10 Farms 🚜</div>
-        <div class="flex py-3 px-4 sm:py-2.5 sm:px-11">20 LP Candies 🍬</div>
-        <div class="flex py-3 px-4 sm:py-2.5 sm:px-11">5 Chains 💈</div>
-        <div class="flex py-3 px-4 sm:py-2.5 sm:px-11">200 Addresses in farming 🗂</div>
+      <div class="container flex flex-wrap justify-center text-white text-xs whitespace-nowrap">
+        <div class="flex mx-1 md:mx-5 lg:mx-10 py-[10px] items-end">10 Farms
+          <img src="~/assets/img/icons/tractor.png"
+               class="mx-[6px]"
+               width="20"
+               height="20"
+               alt="">
+        </div>
+        <div class="flex mx-1 md:mx-5 lg:mx-10 py-[10px] items-end">20 LP Candies
+          <img src="~/assets/img/icons/candy.png"
+               class="mx-[6px]"
+               width="20"
+               height="20"
+               alt=""></div>
+        <div class="flex mx-1 md:mx-5 lg:mx-10 py-[10px] items-end">5 Chains
+          <img src="~/assets/img/icons/pipe.png"
+               class="mx-[6px]"
+               width="20"
+               height="20"
+               alt=""></div>
+        <div class="flex mx-1 md:mx-5 lg:mx-10 py-[10px] items-end">200 Addresses in farming
+          <img src="~/assets/img/icons/factory.png"
+               class="mx-[6px]"
+               width="20"
+               height="20"
+               alt=""></div>
       </div>
     </div>
-    <div class="block shadow ">
+    <div class="block shadow-lg">
       <div class="container flex items-center">
         <div class="py-3 mr-auto lg:mr-0 order-1">
           <svg class="md:mx-10"
@@ -374,12 +395,20 @@
               v-for="(item, key) in navigation"
               :key="key"
               :class="{
-                'no-underline hover:underline': $route.name !== item.route,
+                'no-underline hover:underline ': $route.name !== item.route,
               }"
               :href="item.href"
               :route="item.route"
+              :disabled="item.disabled"
+              :disabledTitle="item.disabledTitle"
+              :interface="item.interface"
               class="px-5 text-[13px]">
-              {{ item.label }}
+              <span class=""
+                   :class="{
+                'text-magenta border-b border-magenta': $route.name === item.route,
+              }">
+                {{ item.label }}
+              </span>
             </component-link>
           </nav>
         </div>
@@ -391,25 +420,28 @@
             <span class="font-semibold text-[#12161D]">10 LPs</span>
             <span class="font-semibold text-[#12161D] text-opacity-50"> | $186,0000</span>
           </div>
-          <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-4 py-3 mx-4 hover:cursor-pointer"
-               @click="openSelectNetwork">
-            <icon class="text-[17px] fill-current stroke-current mx-1"
-                  name="mono/poligon"/>
-            <div class="font-bold text-[#140035]">
-              poligon
-            </div>
+
+          <div :class="(network === 'etherium') ?  'border-[#FF00F5]' : ''"
+               class="flex items-center rounded-[40px] border-[#D9DCE2] border-[1px] px-2 h-[42px] mx-5 my-4 sm:my-0 hover:cursor-pointer hover:border-magenta"
+               @click="openSelectNetwork"
+          >
+            <img alt="etherium"
+                 height="25"
+                 src="~/assets/img/interface/etherium.svg"
+                 width="100">
           </div>
-          <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] p-2 my-4">
-            <div class="flex">
+          <div class="flex items-center h-[42px] rounded-[40px] border-[#D9DCE2] border-[1px] px-[10px] my-4">
+            <div class="flex w-[22px]">
               <img alt=""
+                   width="22"
+                   height="22"
                    src="~/assets/img/interface/fox.svg">
             </div>
-            <div class="flex-col px-2">
-              <p class="block font-semibold text-xs">0xced4...sdf01a</p>
-              <p class="block text-[10px]">Mainnet</p>
+            <div class="flex-col px-[11px]">
+              <div class="block font-semibold text-xs">0xced4...sdf01a</div>
             </div>
-            <div class="flex border-[1px] border-gray-400 rounded-full p-2">
-              <icon class="text-[10px] fill-current stroke-current"
+            <div class="flex border-[1px] border-[#D9DCE2] rounded-full p-2">
+              <icon class="text-[12px] fill-current stroke-current"
                     name="mono/logout"/>
             </div>
           </div>
@@ -417,7 +449,7 @@
         <div v-else
              class="flex lg:order-3 order-2 items-center">
           <btn block
-               class="px-[56px] font-bold text-[13px]"
+               class="px-[20px] sm:px-[56px] font-bold text-[13px]"
                rounded
                size="medium"
                variant="gradient"

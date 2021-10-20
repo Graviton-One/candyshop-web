@@ -95,9 +95,18 @@ export default Vue.extend({
 
 .btn--gradient {
   background: linear-gradient(260.18deg, #FB2EFF 24.15%, #7736FF 59.59%);
+  &:hover {
+    background:#FF00F5;
+  }
 }
 .btn--empty {
   @apply border-[1px] border-[#D9DCE2] rounded-[23px] text-[#12161D] text-opacity-50 text-[13px] text-center align-middle;
+  &:hover {
+    @apply text-black border-magenta;
+  }
+  &:active {
+    @apply bg-magenta;
+  }
 }
 
 .btn--rounded {

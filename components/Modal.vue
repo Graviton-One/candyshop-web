@@ -5,7 +5,7 @@
           'pointer-events-none opacity-0 invisible': !modal || modal.name !== name,
         }">
 
-    <div class="fixed inset-0 w-full h-full bg-[#080808] bg-opacity-80"
+    <div class="fixed inset-0 w-full h-full bg-[#97A8B4] bg-opacity-80 backdrop-blur-[15px]"
          aria-label="Close the modal window"
     @click="$emit('close')"/>
 

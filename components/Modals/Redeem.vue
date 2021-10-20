@@ -1,10 +1,10 @@
 <template>
   <modal name="redeem"
          @close="$store.commit('app/CLOSE_MODAL')">
-    <div class="relative h-full bg-white rounded-[8px] min-h-[307px] py-[44px] px-[40px] sm:min-w-[540px]">
+    <div class="relative h-full bg-white rounded-[23px] min-h-[307px]  sm:py-[44px] p-6 sm:px-[40px] sm:min-w-[540px]">
 
       <button
-        class="absolute z-10 right-[12px] top-[12px] bg-ghost-white text-vampire-black hover:text-white hover:bg-candy-apple-red text-[12px] p-0 rounded-full w-[27px] h-[27px] flex items-center justify-center"
+        class="absolute z-10 right-[12px] top-[12px] bg-ghost-white text-vampire-black hover:text-[#FF00F5]  text-[12px] p-0 rounded-full w-[27px] h-[27px] flex items-center justify-center"
         aria-label="Close the modal window"
         @click="$store.commit('app/CLOSE_MODAL')">
         <icon name="mono/close" class="fill-current stroke-current"/>
@@ -12,14 +12,14 @@
 
      <div class="flex border-b border-[#D9DCE2] pb-5">
        <span class="flex px-1 pl-4">
-         <p class="h-10 w-10 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
-           <icon class="text-[22px] fill-current stroke-current text-black "
+         <div class="h-10 w-10 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
+           <icon class="text-[22px]"
                  name="mono/gton"/>
-         </p>
-         <p class="h-10 w-10 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-10 bg-white ml-[-7px]">
-           <icon class="text-[22px]  fill-current stroke-current text-blue-900 "
-                 name="mono/gton"/>
-         </p>
+         </div>
+         <div class="h-10 w-10 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-10 bg-white ml-[-7px]">
+           <icon class="text-[22px]"
+                 name="mono/usdc"/>
+         </div>
        </span>
        <span class="font-medium text-[26px] pl-2 text-[#12161D]">
          canUSDC
@@ -33,14 +33,14 @@
           <div class="">2000 USDT</div>
         </div>
         <div class="mt-4">
-          <input type="text" class="w-full rounded-[27px] border-[1px] border-[#b7d2d6] text-[#12161d] text-xs p-3 appearance-none outline-none font-medium">
+          <input type="text" class="w-full rounded-[27px] border-[1px] border-[#b7d2d6] text-[#12161d] text-xs p-3 appearance-none outline-none font-medium focus:border-[#FF00F5]">
         </div>
-        <div class="flex mt-3 text-[13px]">
+        <div class="flex mt-[14px] text-[13px]">
           <div class="text-[#12161D] mr-auto">
             You will receive:
           </div>
         </div>
-        <div class="flex mt-3 text-[13px]">
+        <div class="flex mt-[14px] text-[13px]">
           <div class="text-[#12161D] text-opacity-50 mr-auto">
             paid:
           </div>
@@ -49,7 +49,7 @@
           </div>
         </div>
 
-        <div class="flex mt-3 text-[13px]">
+        <div class="flex mt-[10px] text-[13px]">
           <div class="text-[#12161D] text-opacity-50 mr-auto">
             earned rewards:
           </div>
@@ -57,8 +57,8 @@
             55 GTON
           </div>
         </div>
-        <div class="flex mt-3 text-[13px] items-center">
-          <div class="text-[#12161D] text-opacity-50 mr-auto">
+        <div class="flex mt-[10px] text-[13px] items-center">
+          <div class="text-[#12161D] mr-auto">
             Total:
           </div>
           <div class="text-[25px]">
@@ -67,7 +67,7 @@
         </div>
       </div>
     </div>
-      <div class="flex mt-4 text-[10px]">
+      <div class="sm:flex mt-4 text-[10px]">
         <div class="text-[#12161D] text-opacity-50 mr-auto">
           Estemated transaction time:
         </div>
@@ -75,7 +75,7 @@
           ~ 5 minutes
         </div>
       </div>
-      <div class="flex mt-4 text-[10px]">
+      <div class="sm:flex mt-2 text-[10px]">
         <div class="text-[#12161D] text-opacity-50 mr-auto">
           Estemated transaction fee:
         </div>
@@ -83,7 +83,7 @@
           the standard fee of the outbound network
         </div>
       </div>
-      <div class="flex mt-4 ">
+      <div class="flex mt-5 ">
         <btn
         rounded
         block
