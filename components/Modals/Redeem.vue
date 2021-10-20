@@ -1,7 +1,7 @@
 <template>
   <modal name="redeem"
          @close="$store.commit('app/CLOSE_MODAL')">
-    <div class="relative h-full bg-white rounded-[8px] min-h-[307px] py-[44px] px-[40px] min-w-[540px]">
+    <div class="relative h-full bg-white rounded-[8px] min-h-[307px] py-[44px] px-[40px] sm:min-w-[540px]">
 
       <button
         class="absolute z-10 right-[12px] top-[12px] bg-ghost-white text-vampire-black hover:text-white hover:bg-candy-apple-red text-[12px] p-0 rounded-full w-[27px] h-[27px] flex items-center justify-center"
@@ -124,8 +124,9 @@ export default Vue.extend({
     confirmRedeem() {
       // Deep copy object
       this.data.callbackRedeem && this.data.callbackRedeem()
+
       console.log('modal')
-      const modal = JSON.parse(JSON.stringify(this.$store.getters["app/exampleModals"].confirmRedeem));
+      const modal = JSON.parse(JSON.stringify(this.$store.getters["app/exampleModals"].confirmModal));
       console.log(modal)
       this.$store.commit('app/PUSH_MODAL', modal)
     }

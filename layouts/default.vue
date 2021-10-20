@@ -15,7 +15,7 @@
     <modals-connect-wallet />
     <modals-buyLP />
     <modals-redeem />
-    <modals-confirmRedeem />
+    <modals-confirmModal />
     <modals-select-network />
     <vue-footer />
   </div>

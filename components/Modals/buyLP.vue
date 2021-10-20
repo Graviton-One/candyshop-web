@@ -1,7 +1,7 @@
 <template>
   <modal name="buyLP"
          @close="$store.commit('app/CLOSE_MODAL')">
-    <div class="relative h-full bg-white rounded-[8px] min-h-[307px] py-[44px] px-[40px] min-w-[540px]">
+    <div class="relative h-full bg-white rounded-[8px] min-h-[307px] py-[44px] px-[40px] sm:min-w-[540px]">
 
       <button
         class="absolute z-10 right-[12px] top-[12px] bg-ghost-white text-vampire-black hover:text-white hover:bg-candy-apple-red text-[12px] p-0 rounded-full w-[27px] h-[27px] flex items-center justify-center"
@@ -26,14 +26,14 @@
        </span>
      </div>
     <div class="flex flex-wrap mt-5 rounded-[23px] rainbow p-8">
-      <div class="">
+      <div class="w-full sm:w-auto">
         <div class="text-[13px] font-medium text-[#12161D]">
           Token
         </div>
-        <div class="py-4">
-          <span class="arrow relative mr-4">
+        <div class="py-4 w-full">
+          <span class="arrow relative mr-4 w-full">
           <select
-            class="rounded-[27px] border-[1px] border-[#b7d2d6] text-[#12161d] text-xs p-3 w-[140px] appearance-none outline-none font-medium">
+            class="rounded-[27px] border-[1px] border-[#b7d2d6] text-[#12161d] text-xs p-3 w-full sm:w-[140px] appearance-none outline-none font-medium">
             <option value="USDT">
               <icon name="mono/poligon" class="fill-current stroke-current"/>
               USDT
@@ -42,7 +42,7 @@
           </span>
         </div>
       </div>
-      <div class="">
+      <div class="w-full sm:w-auto">
         <div class="flex text-[13px] font-medium text-[#12161D]">
           <div class="">Amount</div>
           <div class=" text-[#12161D] text-opacity-50 ml-4 mr-1">Candy available:  </div>
@@ -73,7 +73,8 @@
         <btn
         rounded
         block
-        variant="gradient">
+        variant="gradient"
+        @click="confirmBuy">
           Buy NOW
         </btn>
       </div>
@@ -106,6 +107,15 @@ export default Vue.extend({
     }
   },
   methods: {
+    confirmBuy() {
+      // Deep copy object
+
+      console.log('modal')
+      const modal = JSON.parse(JSON.stringify(this.$store.getters["app/exampleModals"].confirmModal));
+      this.data.callbackBuy && this.data.callbackBuy()
+      console.log(modal)
+      this.$store.commit('app/PUSH_MODAL', modal)
+    }
   }
 })
 </script>

@@ -185,9 +185,9 @@ export const state = () => ({
         img: require('~/assets/img/icons/sol.svg'),
       }, // Данные помещаемые в модальное окно
     },
-    confirmRedeem: {
+    confirmModal: {
       index: '4', // Индекс для перерисовки одного и того же модального окна
-      name: 'confirmRedeem', // Уникальное название модального окна
+      name: 'confirmModal', // Уникальное название модального окна
       data: {
         label: 'MetaMask',
         img: require('~/assets/img/icons/sol.svg'),

@@ -11,7 +11,7 @@
 
     <transition name="fade">
       <div v-if="modal" :key="name+'-'+modal.index"
-           class="relative p-[1.5rem] z-[1] m-auto">
+           class="relative p-[1.5rem] w-full  sm:w-auto z-[1] m-auto">
         <slot/>
       </div>
     </transition>
