@@ -428,7 +428,7 @@ export default Vue.extend({
   }),
   methods: {
     changeDrop() {
-      if (this.dropdown === false) {
+      if (!this.dropdown) {
         this.dropdown = true
       } else {
         this.dropdown = false
@@ -437,6 +437,7 @@ export default Vue.extend({
     },
     closeDropMenu() {
       if (document.activeElement instanceof HTMLElement) {
+        this.dropdown = false
         document.activeElement.blur();
       }
     },
