@@ -38,8 +38,10 @@
   </div>
 </template>
 
-<script>
-import Vue from 'vue'
+<script lang="ts">
+// eslint-disable-next-line
+import Vue, { PropType } from 'vue'
+import { Chains } from './constants'
 
 export default Vue.extend({
   props: {
@@ -61,7 +63,7 @@ export default Vue.extend({
       default: 0,
     },
     chain: {
-      type: String,
+      type: String as PropType<Chains>,
       default: '',
     },
     blocking: {

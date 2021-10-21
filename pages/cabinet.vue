@@ -38,23 +38,19 @@
         <table class="w-full min-w-[600px] mb-[70px]">
           <thead>
           <tr class="border-b border-[#D9DCE2] h-[70px]">
-            <th class="text-[#12161D] text-opacity-50 text-left"
-                width="5%">#
+            <th class="text-[#12161D] text-opacity-50 text-left w-[5%]"
+                >#
             </th>
-            <th class="text-[#12161D] text-left"
-                width="30%">LP Candies
+            <th class="text-[#12161D] text-left w-[30%]"
+                >LP Candies
             </th>
-            <th class="text-[#12161D] text-left"
-                width="20%">APY
+            <th class="text-[#12161D] text-left w-[20%]">APY
             </th>
-            <th class="text-[#12161D] text-left"
-                width="20%">Paid
+            <th class="text-[#12161D] text-left w-[20%]">Paid
             </th>
-            <th class="text-[#12161D] text-left"
-                width="20%">Received
+            <th class="text-[#12161D] text-left w-[20%]">Received
             </th>
-            <th class=""
-                width="5%"></th>
+            <th class="w-[5%]"></th>
           </tr>
           </thead>
           <tbody>

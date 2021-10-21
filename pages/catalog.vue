@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="flex pt-8 pb-4">
-      <span v-click-outside="onClickOutside" class="text-2xl font-bold mr-auto">
+      <span  class="text-2xl font-bold mr-auto">
         Explore ⚡️
       </span>
       <div class="select-none">
@@ -10,17 +10,17 @@
           <div class="dropdown">
             <button class="arrow dropdown-title flex items-center text-sm  rounded-[40px] border-[#D9DCE2] border-[1px] h-[38px] w-full sm:w-[143px] py-[4px] pl-[12px] sm:my-0
                 hover:cursor-pointer hover:border-magenta"
-            @click="changeDrop">
+            @click="changeDrop()">
               All chains
             </button>
             <div
-              class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px] w-[143px]" tabindex="0">
+              class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px] w-[143px]" tabindex="0" ref="dropdownMenu">
               <div>
                 <div class="flex text-magenta text-sm px-4 pt-3">
                   All chains
                 </div>
                 <button class="flex items-center justify-center rounded-[40px] border-gray-300 border-[1px] w-[111px] h-[33px] m-[10px] hover:cursor-pointer hover:border-magenta "
-                     @click="closeDropMenu">
+                        v-click-outside="onClickOutside">
                   <img alt="poligon"
                        height="23"
                        src="~/assets/img/interface/poligon.svg"
@@ -436,7 +436,9 @@ export default Vue.extend({
       }
     },
     onClickOutside(){
-      console.log('onClickOutside')
+      if (!document.activeElement.className.includes('dropdown-title')) {
+        this.dropdown = false
+      }
     },
     closeDropMenu() {
       if (document.activeElement instanceof HTMLElement) {
