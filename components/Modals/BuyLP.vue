@@ -37,37 +37,37 @@
               <div class="dropdown ">
                 <button class="arrow dropdown-title flex items-center text-sm  rounded-[40px] border-[#D9DCE2] border-[1px] h-[42px] w-full sm:w-[168px] py-[4px] pl-[12px] sm:my-0
                 hover:cursor-pointer hover:border-magenta">
-                  <div class="h-[30px] w-[30px] mr-1 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
+                  <span class="h-[30px] w-[30px] mr-1 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                     <icon class="text-[16px]"
                           name="mono/usdt"/>
-                  </div>
+                  </span>
                   USDT
                 </button>
                 <div
                      class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px] bg-white w-[168px]" tabindex="0">
                   <div>
                     <button class="flex items-center bg-white w-full h-[42px] p-[10px] hover:cursor-pointer hover:bg-[#D9DCE2] hover:rounded-t-[11px] hover:bg-opacity-50 "
-                         @click="onfocus">
-                      <div class="h-[30px] w-[30px] mr-1 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
+                         @click="closeDropMenu">
+                      <span class="h-[30px] w-[30px] mr-1 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                         <icon class="text-[16px]"
                               name="mono/usdt"/>
-                      </div>
+                      </span>
                       USDT
                     </button>
                     <button class="flex items-center w-full bg-white h-[42px] p-[10px] hover:cursor-pointer hover:bg-[#D9DCE2] hover:bg-opacity-50"
-                    @click="onfocus">
-                      <div class="h-[30px] w-[30px] mr-1 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white  ">
+                    @click="closeDropMenu">
+                      <span class="h-[30px] w-[30px] mr-1 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white  ">
                         <icon class="text-[16px]"
                               name="mono/usdc"/>
-                      </div>
+                      </span>
                       USDC
                     </button>
                     <button class="flex items-center w-full bg-white h-[42px] p-[10px] hover:cursor-pointer hover:bg-[#D9DCE2] hover:rounded-b-[11px] hover:bg-opacity-50 "
-                         @click="onfocus">
-                      <div class="h-[30px] w-[30px] mr-1 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
+                         @click="closeDropMenu">
+                      <span class="h-[30px] w-[30px] mr-1 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                         <icon class="text-[16px]"
                               name="mono/busd"/>
-                      </div>
+                      </span>
                       BUSD
                     </button>
                   </div>
@@ -153,7 +153,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    onfocus() {
+    closeDropMenu() {
       if (document.activeElement instanceof HTMLElement) {
         document.activeElement.blur();
       }

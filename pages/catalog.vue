@@ -19,21 +19,21 @@
                   All chains
                 </div>
                 <button class="flex items-center justify-center rounded-[40px] border-gray-300 border-[1px] w-[111px] h-[33px] m-[10px] hover:cursor-pointer hover:border-magenta "
-                     @click="onfocus">
+                     @click="closeDropMenu">
                   <img alt="poligon"
                        height="23"
                        src="~/assets/img/interface/poligon.svg"
                        width="90">
                 </button>
                 <button class="flex items-center justify-center rounded-[40px] border-gray-300 border-[1px] w-[111px] h-[33px] m-[10px] hover:cursor-pointer hover:border-magenta "
-                     @click="onfocus">
+                     @click="closeDropMenu">
                   <img alt="etherium"
                        height="23"
                        src="~/assets/img/interface/etherium.svg"
                        width="90">
                 </button>
                 <button class="flex items-center justify-center rounded-[40px] border-gray-300 border-[1px] w-[111px] h-[33px] m-[10px] hover:cursor-pointer hover:border-magenta "
-                     @click="onfocus">
+                     @click="closeDropMenu">
                   <img alt="fantom"
                        height="23"
                        src="~/assets/img/interface/fantom.svg"
@@ -426,7 +426,7 @@ export default Vue.extend({
     dropdown: false
   }),
   methods: {
-    onfocus() {
+    closeDropMenu() {
       if (document.activeElement instanceof HTMLElement) {
         document.activeElement.blur();
       }
