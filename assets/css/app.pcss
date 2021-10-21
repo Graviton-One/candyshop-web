@@ -98,7 +98,7 @@
   display: inline-block;
 }
 .dropdown-content {
-  display: block;
+  display: none;
   left: -5%;
   top: 44px;
   position: absolute;
@@ -107,6 +107,11 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 50!important;
 }
+.dropdown:focus-within .dropdown-content{ display:block; }
+.dropdown:focus-within {
+  border-color: #FF00FF;
+}
+
 
 .active-menu {
   text-underline-offset: 3px;
@@ -171,4 +176,11 @@
 .underline-thickness-0.5 {
   text-decoration-thickness: 0.5px;
   text-underline-offset: 2px;
+}
+
+.icon {
+  overflow: hidden;
+  display: inline-block;
+  flex-shrink: 0;
+  pointer-events: none;
 }

@@ -6,51 +6,53 @@
       </span>
       <div class="select-none">
         <span class="">
-          <div :class="(dropdown) ? 'border-magenta' : ''"
-               class="dropdown rounded-[40px] border-[#D9DCE2] border-[1px] h-[38px] w-[143px] py-[7px] pl-[12px] sm:my-0 hover:cursor-pointer hover:border-magenta"
-               @click="dropdown = !dropdown">
-            <span class="arrow text-sm">All chains</span>
-            <div v-if="dropdown"
-                 class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px] ">
+
+          <div class="dropdown rounded-[40px] border-[#D9DCE2] border-[1px] h-[38px] w-[143px] py-[7px] pl-[12px] sm:my-0 hover:cursor-pointer hover:border-magenta">
+            <button class="arrow text-sm">All chains</button>
+            <button
+              class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px] ">
               <div>
                 <div class="flex text-magenta text-sm px-4 pt-3">
                   All chains
                 </div>
-                <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer hover:border-magenta ">
+                <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer hover:border-magenta "
+                     @click="onfocus">
                   <img alt="poligon"
                        height="25"
                        src="~/assets/img/interface/poligon.svg"
                        width="100">
                 </div>
-                <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer hover:border-magenta">
+                <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer hover:border-magenta"
+                     @click="onfocus">
                   <img alt="etherium"
                        height="25"
                        src="~/assets/img/interface/etherium.svg"
                        width="100">
                 </div>
-                <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer hover:border-magenta">
+                <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer hover:border-magenta"
+                     @click="onfocus">
                   <img alt="fantom"
                        height="25"
                        src="~/assets/img/interface/fantom.svg"
                        width="100">
                 </div>
               </div>
-            </div>
+            </button>
           </div>
         </span>
         <span class="text-[#12161d] text-xs font-medium">
           <button
+            class="items-center"
             @click="changeAPY">
             APY
-            <icon v-if="apy === 0"
-                  class="text-base "
-                  name="apy"/>
-            <icon v-if="apy === 1"
-                  class="text-base "
-                  name="apyUp"/>
-            <icon v-if="apy === 2"
-                  class="text-base "
-                  name="apyDown"/>
+            <svg width="18" height="18" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 0L23 12.8571L6 12.8571L14.5 0Z"
+                    :fill="(apy === 'asc') ? '#FB2EFF' : '#12161D'"
+                    :fill-opacity="(apy === 'asc') ? '1' : '0.5'"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 30L23 17.1429L6 17.1429L14.5 30Z"
+                    :fill="(apy === 'desc') ? '#FB2EFF' : '#12161D'"
+                    :fill-opacity="(apy === 'desc') ? '1' : '0.5'"/>
+            </svg>
           </button>
 
         </span>
@@ -417,10 +419,13 @@ import Vue from 'vue'
 
 export default Vue.extend({
   data: () => ({
-    apy: 0,
+    apy: 'asc',
     dropdown: false
   }),
   methods: {
+    onfocus() {
+      document.activeElement.blur()
+    },
     openBuyLP() {
       // Deep copy object
       console.log('modal')
@@ -432,9 +437,15 @@ export default Vue.extend({
       this.$store.commit('app/PUSH_MODAL', modal)
     },
     changeAPY() {
-      this.apy += 1
-      if (this.apy === 3) {
-        this.apy = 0
+      if (this.apy === 'asc') {
+        this.apy = 'desc'
+      }
+      else
+      if (this.apy === 'desc') {
+        this.apy = 'default'
+      } else
+      if (this.apy === 'default') {
+        this.apy = 'asc'
       }
     }
   }
