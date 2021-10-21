@@ -9,13 +9,13 @@
 
           <div class="dropdown " :class="dropdown ? 'active' : ''"
                v-click-outside="onClickOutside" >
-            <button class="arrow dropdown-title flex items-center text-sm  rounded-[40px] border-[#D9DCE2] border-[1px] h-[38px] w-full sm:w-[143px] py-[4px] pl-[12px] sm:my-0
+            <button class="arrow dropdown-title flex items-center text-sm  rounded-[40px] border-[#D9DCE2] border-[1px] h-[38px] w-full w-[143px] py-[4px] pl-[12px] sm:my-0
                 hover:cursor-pointer hover:border-magenta"
             @click="dropdown = !dropdown">
               All chains
             </button>
             <div
-              class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px] w-[143px]" tabindex="0">
+              class="dropdown-content overflow-hidden rounded-[11px] border-[#D9DCE2] border-[1px] w-[143px]" tabindex="0">
               <div>
                 <div class="flex text-magenta text-sm px-4 pt-3">
                   All chains
@@ -67,7 +67,7 @@
       <div class="flex m-[1rem] rounded-[23px] border-[1px] border-[#B85DFF] ">
         <div class="flex-col pt-6 pb-10 px-8 candy-bg-first">
           <div class="flex items-center  h-[46px] w-[236px] border-[1px] border-[#D9DCE2] rounded-[23px] bg-white mb-3 hover:border-[#FF00F5] hover:cursor-pointer">
-            <span class="flex px-1 pl-4">
+            <div class="flex px-1 pl-4">
               <div class="h-[30px] w-[30px] flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                 <icon class="text-base"
                       name="mono/gton"/>
@@ -76,7 +76,7 @@
                 <icon class="text-base"
                       name="mono/usdc"/>
               </div>
-            </span>
+            </div>
             <span class="font-medium text-xl pl-2 text-[#FF00F5]">
               canUSDC
             </span>
@@ -111,12 +111,12 @@
       <div class="flex m-[1rem] rounded-[23px] border-[1px] border-[#40DDFF] ">
         <div class="flex-col pt-6 pb-10 px-8 candy-bg-second">
           <div class="flex items-center  h-[46px] w-[236px] border-[1px] border-[#D9DCE2] rounded-[23px] bg-white mb-3 hover:border-[#FF00F5] hover:cursor-pointer">
-            <span class="flex px-1 pl-4">
+            <div class="flex px-1 pl-4">
               <div class="h-[30px] w-[30px] flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                 <icon class="text-base"
                       name="mono/step"/>
               </div>
-            </span>
+            </div>
             <span class="font-medium text-xl pl-2 text-[#FF00F5]">
               canSTEP
             </span>

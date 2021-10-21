@@ -531,7 +531,7 @@
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
-              <span class="flex px-1">
+              <div class="flex px-1">
                 <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
@@ -540,7 +540,7 @@
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
                 </div>
-              </span>
+              </div>
               <span class="font-medium text-lg">
                 lp_gton-usdc
               </span>
@@ -737,7 +737,7 @@
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
-              <span class="flex px-1">
+              <div class="flex px-1">
                 <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
@@ -746,7 +746,7 @@
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
                 </div>
-              </span>
+              </div>
               <span class="font-medium text-lg">
                 lp_gton-usdc
               </span>
@@ -907,7 +907,7 @@
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
-              <span class="flex px-1">
+              <div class="flex px-1">
                 <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
@@ -916,7 +916,7 @@
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
                 </div>
-              </span>
+              </div>
               <span class="font-medium text-lg">
                 lp_gton-usdc
               </span>
@@ -1077,7 +1077,7 @@
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
-              <span class="flex px-1">
+              <div class="flex px-1">
                 <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
@@ -1086,7 +1086,7 @@
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
                 </div>
-              </span>
+              </div>
               <span class="font-medium text-lg">
                 lp_gton-usdc
               </span>
@@ -1247,7 +1247,7 @@
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
-              <span class="flex px-1">
+              <div class="flex px-1">
                 <div class="h-8 w-8 flex justify-center rounded-[40px] rainbow items-center z-20 bg-white">
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
@@ -1256,7 +1256,7 @@
                   <icon class="text-base fill-current stroke-current text-blue-900 "
                         name="mono/gton"/>
                 </div>
-              </span>
+              </div>
               <span class="font-medium text-lg">
                 lp_gton-usdc
               </span>

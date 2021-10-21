@@ -34,7 +34,7 @@
           </div>
           <div class="pt-2 pb-4 sm:py-3 w-full">
             <div class=" relative sm:mr-4 w-full flex">
-              <div class="dropdown " :class="dropdown ? 'active' : ''"
+              <div class="dropdown  w-full sm:w-auto" :class="dropdown ? 'active' : ''"
                    v-click-outside="onClickOutside" >
                 <button class="arrow dropdown-title flex items-center text-sm  rounded-[40px] border-[#D9DCE2] border-[1px] h-[42px] w-full sm:w-[168px] py-[4px] pl-[12px] sm:my-0
                 hover:cursor-pointer hover:border-magenta"
@@ -46,7 +46,7 @@
                   USDT
                 </button>
                 <div
-                     class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px] bg-white w-[168px]" tabindex="0">
+                     class="dropdown-content overflow-hidden rounded-[11px] border-[#D9DCE2] border-[1px] bg-white w-[168px]" tabindex="0">
                   <div>
                     <button class="flex items-center bg-white w-full h-[42px] p-[10px] hover:cursor-pointer hover:bg-[#D9DCE2] hover:rounded-t-[11px] hover:bg-opacity-50 "
                          @click="closeDropMenu">
