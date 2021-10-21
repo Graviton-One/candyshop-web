@@ -34,11 +34,11 @@
           </div>
           <div class="pt-2 pb-4 sm:py-3 w-full">
             <div class=" relative sm:mr-4 w-full flex">
-              <div class="dropdown "
-                   v-click-outside="onClickOutside">
+              <div class="dropdown " :class="dropdown ? 'active' : ''"
+                   v-click-outside="onClickOutside" >
                 <button class="arrow dropdown-title flex items-center text-sm  rounded-[40px] border-[#D9DCE2] border-[1px] h-[42px] w-full sm:w-[168px] py-[4px] pl-[12px] sm:my-0
                 hover:cursor-pointer hover:border-magenta"
-                        @click="changeDrop">
+                        @click="dropdown = !dropdown">
                   <span class="h-[30px] w-[30px] mr-1 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                     <icon class="text-[16px]"
                           name="mono/usdt"/>
@@ -155,24 +155,13 @@ export default Vue.extend({
     }
   },
   methods: {
-    changeDrop() {
-      if (!this.dropdown) {
-        this.dropdown = true
-      } else {
-        this.dropdown = false
-        document.activeElement.blur();
-      }
-    },
     onClickOutside(){
       if (!document.activeElement.className.includes('dropdown')) {
         this.dropdown = false
       }
     },
     closeDropMenu() {
-      if (document.activeElement instanceof HTMLElement) {
-        this.dropdown = false
-        document.activeElement.blur();
-      }
+      this.dropdown = false
     },
     confirmBuy() {
       // Deep copy object

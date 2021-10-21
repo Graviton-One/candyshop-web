@@ -7,21 +7,21 @@
       <div class="select-none">
         <div class="inline-flex">
 
-          <div class="dropdown "
-               v-click-outside="onClickOutside">
+          <div class="dropdown " :class="dropdown ? 'active' : ''"
+               v-click-outside="onClickOutside" >
             <button class="arrow dropdown-title flex items-center text-sm  rounded-[40px] border-[#D9DCE2] border-[1px] h-[38px] w-full sm:w-[143px] py-[4px] pl-[12px] sm:my-0
                 hover:cursor-pointer hover:border-magenta"
-            @click="changeDrop()">
+            @click="dropdown = !dropdown">
               All chains
             </button>
             <div
-              class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px] w-[143px]" tabindex="0" ref="dropdownMenu">
+              class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px] w-[143px]" tabindex="0">
               <div>
                 <div class="flex text-magenta text-sm px-4 pt-3">
                   All chains
                 </div>
                 <button class="flex items-center justify-center rounded-[40px] border-gray-300 border-[1px] w-[111px] h-[33px] m-[10px] hover:cursor-pointer hover:border-magenta "
-                        >
+                        @click="closeDropMenu">
                   <img alt="poligon"
                        height="23"
                        src="~/assets/img/interface/poligon.svg"
@@ -151,7 +151,7 @@
       <div class="flex m-[1rem] rounded-[23px] border-[1px] border-[#32FF6B] ">
         <div class="flex-col pt-6 pb-10 px-8 candy-bg-third">
           <div class="flex items-center  h-[46px] w-[236px] border-[1px] border-[#D9DCE2] rounded-[23px] bg-white mb-3 hover:border-[#FF00F5] hover:cursor-pointer">
-            <span class="flex px-1 pl-4">
+            <div class="flex px-1 pl-4">
               <div class="h-[30px] w-[30px] flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                 <icon class="text-base"
                       name="mono/gton"/>
@@ -160,7 +160,7 @@
                 <icon class="text-base"
                       name="mono/spirit"/>
               </div>
-            </span>
+            </div>
             <span class="font-medium text-xl pl-2 text-[#FF00F5]">
               canSPIRIT
             </span>
@@ -195,7 +195,7 @@
       <div class="flex m-[1rem] rounded-[23px] border-[1px] border-[#FFE600] ">
         <div class="flex-col pt-6 pb-10 px-8 candy-bg-fourth">
           <div class="flex items-center  h-[46px] w-[236px] border-[1px] border-[#D9DCE2] rounded-[23px] bg-white mb-3 hover:border-[#FF00F5] hover:cursor-pointer">
-            <span class="flex px-1 pl-4">
+            <div class="flex px-1 pl-4">
               <div class="h-[30px] w-[30px] flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                 <icon class="text-base"
                       name="mono/gton"/>
@@ -204,7 +204,7 @@
                 <icon class="text-base"
                       name="mono/luna"/>
               </div>
-            </span>
+            </div>
             <span class="font-medium text-xl pl-2 text-[#FF00F5]">
               canLUNA
             </span>
@@ -240,7 +240,7 @@
       <div class="flex m-[1rem] rounded-[23px] border-[1px] border-[#B85DFF] ">
         <div class="flex-col pt-6 pb-10 px-8 candy-bg-first">
           <div class="flex items-center  h-[46px] w-[236px] border-[1px] border-[#D9DCE2] rounded-[23px] bg-white mb-3 hover:border-[#FF00F5] hover:cursor-pointer">
-            <span class="flex px-1 pl-4">
+            <div class="flex px-1 pl-4">
               <div class="h-[30px] w-[30px] flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                 <icon class="text-base"
                       name="mono/gton"/>
@@ -249,7 +249,7 @@
                 <icon class="text-base"
                       name="mono/uni"/>
               </div>
-            </span>
+            </div>
             <span class="font-medium text-xl pl-2 text-[#FF00F5]">
               canUNI
             </span>
@@ -284,14 +284,14 @@
       <div class="flex m-[1rem] rounded-[23px] border-[1px] border-[#40DDFF] ">
         <div class="flex-col pt-6 pb-10 px-8 candy-bg-second">
           <div class="flex items-center  h-[46px] w-[236px] border-[1px] border-[#D9DCE2] rounded-[23px] bg-white mb-3 hover:border-[#FF00F5] hover:cursor-pointer">
-            <span class="flex px-1 pl-4">
+            <div class="flex px-1 pl-4">
               <div class="h-[30px] w-[30px] flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                 <img alt=""
                      height="16"
                      src="~/assets/img/icons/aave.png"
                      width="16">
               </div>
-            </span>
+            </div>
             <span class="font-medium text-xl pl-2 text-[#FF00F5]">
               canAAVE
             </span>
@@ -326,7 +326,7 @@
       <div class="flex m-[1rem] rounded-[23px] border-[1px] border-[#32FF6B] ">
         <div class="flex-col pt-6 pb-10 px-8 candy-bg-third">
           <div class="flex items-center  h-[46px] w-[236px] border-[1px] border-[#D9DCE2] rounded-[23px] bg-white mb-3 hover:border-[#FF00F5] hover:cursor-pointer">
-            <span class="flex px-1 pl-4">
+            <div class="flex px-1 pl-4">
               <div class="h-[30px] w-[30px] flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                 <icon class="text-base"
                       name="mono/gton"/>
@@ -335,7 +335,7 @@
                 <icon class="text-base"
                       name="mono/yfi"/>
               </div>
-            </span>
+            </div>
             <span class="font-medium text-xl pl-2 text-[#FF00F5]">
               canYFI
             </span>
@@ -370,7 +370,7 @@
       <div class="flex m-[1rem] rounded-[23px] border-[1px] border-[#FFE600] ">
         <div class="flex-col pt-6 pb-10 px-8 candy-bg-fourth">
           <div class="flex items-center  h-[46px] w-[236px] border-[1px] border-[#D9DCE2] rounded-[23px] bg-white mb-3 hover:border-[#FF00F5] hover:cursor-pointer">
-            <span class="flex px-1 pl-4">
+            <div class="flex px-1 pl-4">
               <div class="h-[30px] w-[30px] flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                 <icon class="text-base"
                       name="mono/gton"/>
@@ -379,7 +379,7 @@
                 <icon class="text-base"
                       name="mono/banana"/>
               </div>
-            </span>
+            </div>
             <span class="font-medium text-xl pl-2 text-[#FF00F5]">
               canBANANA
             </span>
@@ -428,24 +428,13 @@ export default Vue.extend({
     dropdown: false
   }),
   methods: {
-    changeDrop() {
-      if (!this.dropdown) {
-        this.dropdown = true
-      } else {
-        this.dropdown = false
-        document.activeElement.blur();
-      }
-    },
     onClickOutside(){
       if (!document.activeElement.className.includes('dropdown')) {
         this.dropdown = false
       }
     },
     closeDropMenu() {
-      if (document.activeElement instanceof HTMLElement) {
-        this.dropdown = false
-        document.activeElement.blur();
-      }
+      this.dropdown = false
     },
     openBuyLP() {
       // Deep copy object
