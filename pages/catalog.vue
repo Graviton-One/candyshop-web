@@ -7,7 +7,8 @@
       <div class="select-none">
         <div class="inline-flex">
 
-          <div class="dropdown">
+          <div class="dropdown "
+               v-click-outside="onClickOutside">
             <button class="arrow dropdown-title flex items-center text-sm  rounded-[40px] border-[#D9DCE2] border-[1px] h-[38px] w-full sm:w-[143px] py-[4px] pl-[12px] sm:my-0
                 hover:cursor-pointer hover:border-magenta"
             @click="changeDrop()">
@@ -20,7 +21,7 @@
                   All chains
                 </div>
                 <button class="flex items-center justify-center rounded-[40px] border-gray-300 border-[1px] w-[111px] h-[33px] m-[10px] hover:cursor-pointer hover:border-magenta "
-                        v-click-outside="onClickOutside">
+                        >
                   <img alt="poligon"
                        height="23"
                        src="~/assets/img/interface/poligon.svg"
@@ -436,7 +437,7 @@ export default Vue.extend({
       }
     },
     onClickOutside(){
-      if (!document.activeElement.className.includes('dropdown-title')) {
+      if (!document.activeElement.className.includes('dropdown')) {
         this.dropdown = false
       }
     },
