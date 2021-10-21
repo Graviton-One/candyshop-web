@@ -96,7 +96,7 @@ export default Vue.extend({
 .btn--gradient {
   background: linear-gradient(260.18deg, #FB2EFF 24.15%, #7736FF 59.59%);
   &:hover {
-    background:#FF00F5;
+    background: linear-gradient(260.18deg, #FF00F5 24.15%, #FF00F5 59.59%);
   }
 }
 .btn--empty {

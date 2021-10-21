@@ -1,7 +1,7 @@
 <template>
   <modal name="buyLP"
          @close="$store.commit('app/CLOSE_MODAL')">
-    <div class="relative h-full bg-white rounded-[23px] min-h-[307px]  sm:py-[44px] p-6 sm:px-[40px] sm:min-w-[540px]">
+    <div class="relative h-full bg-white rounded-[23px] min-h-[307px]  sm:py-[44px] p-6 sm:px-[40px] sm:min-w-[610px] max-w-[610px]">
 
       <button
         aria-label="Close the modal window"
@@ -11,8 +11,8 @@
               name="mono/close"/>
       </button>
 
-      <div class="flex border-b border-[#D9DCE2] pb-5">
-        <span class="flex px-1 pl-4">
+      <div class="flex border-b border-[#D9DCE2] pb-4 sm:pb-[22px]">
+        <span class="flex">
           <div class="h-10 w-10 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
             <icon class="text-[22px]"
                   name="mono/gton"/>
@@ -26,15 +26,17 @@
           canUSDC
         </span>
       </div>
-      <div class="flex flex-wrap mt-5 rounded-[23px] rainbow p-8">
+      <div class="flex flex-wrap mt-5 rounded-[23px]  border-[1px] border-[#B85DFF] px-6 py-5   sm:px-[30px] sm:pt-[30px] ">
+
         <div class="w-full sm:w-auto">
           <div class="text-[13px] font-medium text-[#12161D]">
             Token
           </div>
-          <div class="py-3 w-full">
+          <div class="pt-2 pb-4 sm:py-3 w-full">
             <span class=" relative sm:mr-4 w-full">
-              <div class="dropdown rounded-[40px] border-[#D9DCE2] border-[1px] h-[38px] w-[143px] py-[4px] pl-[12px] sm:my-0 hover:cursor-pointer hover:border-magenta"
-                   @click="dropdown = !dropdown">
+              <div class="dropdown rounded-[40px] border-[#D9DCE2] border-[1px] h-[42px] w-full sm:w-[168px] py-[4px] pl-[12px] sm:my-0 hover:cursor-pointer hover:border-magenta"
+                   @click="dropdown = !dropdown"
+              :class="(dropdown) ? 'border-magenta' : ''">
                 <span class="arrow flex items-center text-sm">
                   <div class="h-[30px] w-[30px] mr-1 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                     <icon class="text-[16px]"
@@ -43,23 +45,23 @@
                   USDT
                 </span>
                 <div v-if="dropdown"
-                     class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px]">
+                     class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px] bg-white ">
                   <div>
-                    <div class="flex items-center  h-[42px] p-[10px] hover:cursor-pointer hover:bg-[#D9DCE2]">
+                    <div class="flex items-center  h-[42px] p-[10px] hover:cursor-pointer hover:bg-[#D9DCE2] hover:rounded-t-[11px] hover:bg-opacity-50 ">
                       <div class="h-[30px] w-[30px] mr-1 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                         <icon class="text-[16px]"
                               name="mono/usdt"/>
                       </div>
                       USDT
                     </div>
-                    <div class="flex items-center   h-[42px] p-[10px] hover:cursor-pointer hover:bg-[#D9DCE2]">
-                      <div class="h-[30px] w-[30px] mr-1 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
+                    <div class="flex items-center   h-[42px] p-[10px] hover:cursor-pointer hover:bg-[#D9DCE2] hover:bg-opacity-50">
+                      <div class="h-[30px] w-[30px] mr-1 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white  ">
                         <icon class="text-[16px]"
                               name="mono/usdc"/>
                       </div>
                       USDC
                     </div>
-                    <div class="flex items-center  h-[42px] p-[10px] hover:cursor-pointer hover:bg-[#D9DCE2]">
+                    <div class="flex items-center  h-[42px] p-[10px] hover:cursor-pointer hover:bg-[#D9DCE2] hover:rounded-b-[11px] hover:bg-opacity-50 ">
                       <div class="h-[30px] w-[30px] mr-1 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
                         <icon class="text-[16px]"
                               name="mono/busd"/>
@@ -72,19 +74,29 @@
             </span>
           </div>
         </div>
-        <div class="w-full sm:w-auto">
-          <div class="flex text-[13px] font-medium text-[#12161D]">
-            <div class="">Amount</div>
-            <div class=" text-[#12161D] text-opacity-50 ml-4 mr-1">Candy available:</div>
-            <div class="">2000 USDT</div>
+        <div class="w-full sm:w-auto whitespace-nowrap">
+          <div class="flex items-end font-medium text-[#12161D]">
+            <div class="text-[13px] mr-auto">Amount</div>
+            <div class=" text-[#12161D] text-opacity-50 ml-2 sm:ml-4 mr-1 text-[10px] md:text-[13px]">Candy available:</div>
+            <div class="text-[10px] md:text-[13px]">2000 USDT</div>
           </div>
-          <div class="py-3">
-            <input class="w-full rounded-[27px] border-[1px] border-[#b7d2d6] text-[#12161d] text-xs p-3 outline-none font-medium focus:border-[#FF00F5]"
+          <div class="pt-2 pb-4 sm:py-3 w-full">
+            <input class="w-full sm:w-[268px] rounded-[27px] border-[1px] border-[#b7d2d6] text-[#12161d] text-xs p-3 outline-none font-medium focus:border-[#FF00F5]"
                    type="text">
           </div>
         </div>
+        <div class="w-full">
+          <div class="flex items-end font-medium text-[#12161D] whitespace-nowrap">
+            <div class=" text-[#12161D] text-opacity-50  mr-1 text-[13px]">You will receive: </div>
+            <div class="text-[13px]">2000 canUSDC </div>
+          </div>
+
+        </div>
+
+
+
       </div>
-      <div class="sm:flex mt-4 text-[10px]">
+      <div class="sm:flex mt-4 text-[10px] font-medium">
         <div class="text-[#12161D] text-opacity-50 mr-auto">
           Estemated transaction time:
         </div>
@@ -92,7 +104,7 @@
           ~ 5 minutes
         </div>
       </div>
-      <div class="sm:flex mt-2 text-[10px]">
+      <div class="sm:flex mt-2 text-[10px] font-medium">
         <div class="text-[#12161D] text-opacity-50 mr-auto">
           Estemated transaction fee:
         </div>
@@ -100,7 +112,7 @@
           the standard fee of the outbound network
         </div>
       </div>
-      <div class="flex mt-2 ">
+      <div class="flex mt-[22px] ">
         <btn
           block
           rounded

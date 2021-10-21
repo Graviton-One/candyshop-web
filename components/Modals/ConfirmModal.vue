@@ -1,7 +1,7 @@
 <template>
   <modal name="confirmModal"
   @close="$store.commit('app/CLOSE_MODAL')">
-    <div class="relative h-full bg-white rounded-[23px] min-h-[307px]  sm:py-[44px] p-6 sm:px-[40px] sm:min-w-[540px]">
+    <div class="relative h-full bg-white rounded-[23px] min-h-[307px]  sm:py-[44px] p-6 sm:px-[40px] sm:min-w-[610px]">
 
       <button
         class="absolute z-10 right-[12px] top-[12px] bg-ghost-white text-vampire-black hover:text-[#FF00F5]  text-[12px] p-0 rounded-full w-[27px] h-[27px] flex items-center justify-center"

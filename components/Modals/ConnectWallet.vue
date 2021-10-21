@@ -1,7 +1,7 @@
 <template>
   <modal name="connect-wallet"
   @close="$store.commit('app/CLOSE_MODAL')">
-    <div class="relative h-full bg-white rounded-[23px]  min-h-[307px] py-[44px] px-[40px] w-full sm:w-[540px] ">
+    <div class="relative h-full bg-white rounded-[23px] min-h-[307px]  sm:py-[44px] p-6 sm:px-[40px] sm:min-w-[610px]">
 
       <button
         class="absolute z-10 right-[12px] top-[12px] bg-ghost-white text-vampire-black hover:text-[#FF00F5]  text-[12px] p-0 rounded-full w-[27px] h-[27px] flex items-center justify-center"
@@ -14,9 +14,9 @@
         class="mb-[18px] text-[26px] text-[#12161D] leading-none text-center font-medium text-center">
         Connect to {{ label }}
       </div>
-      <div class="flex rainbow rounded-[23px] justify-center">
+      <div class="flex border-[1px] border-[#B85DFF] rounded-[23px] justify-center">
         <div class="bg-dark-charcoal rounded-[10px] min-h-[215px] flex flex-col justify-center items-center">
-          <img class="w-[80px] h-[80px] object-center object-contain mb-[30px]" :src="img" :alt="label">
+          <img class="w-[86px] h-[80px] object-center object-contain mb-[30px]" :src="img" :alt="label">
           <btn v-show="!connected" variant="gradient" rounded  class="w-[150px]"
                @click="handleConnectWallet">
             Connect

@@ -1,7 +1,7 @@
 <template>
   <modal name="redeem"
          @close="$store.commit('app/CLOSE_MODAL')">
-    <div class="relative h-full bg-white rounded-[23px] min-h-[307px]  sm:py-[44px] p-6 sm:px-[40px] sm:min-w-[540px]">
+    <div class="relative h-full bg-white rounded-[23px] min-h-[307px]  sm:py-[44px] p-6 sm:px-[40px] sm:min-w-[610px]">
 
       <button
         class="absolute z-10 right-[12px] top-[12px] bg-ghost-white text-vampire-black hover:text-[#FF00F5]  text-[12px] p-0 rounded-full w-[27px] h-[27px] flex items-center justify-center"
@@ -10,8 +10,8 @@
         <icon name="mono/close" class="fill-current stroke-current"/>
       </button>
 
-     <div class="flex border-b border-[#D9DCE2] pb-5">
-       <span class="flex px-1 pl-4">
+     <div class="flex border-b border-[#D9DCE2] pb-4 sm:pb-[22px]">
+       <span class="flex">
          <div class="h-10 w-10 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
            <icon class="text-[22px]"
                  name="mono/gton"/>
@@ -25,23 +25,23 @@
          canUSDC
        </span>
      </div>
-    <div class="flex flex-wrap mt-5 rounded-[23px] rainbow p-8 bg-white">
+    <div class="flex flex-wrap mt-5 rounded-[23px]  border-[1px] border-[#B85DFF]  p-5 sm:p-8 bg-white">
       <div class="w-full">
-        <div class="flex text-[13px] font-medium text-[#12161D]">
-          <div class=" mr-auto">Amount</div>
-          <div class=" text-[#12161D] text-opacity-50 ml-4 mr-1">Candy available:  </div>
-          <div class="">2000 USDT</div>
+        <div class="flex items-end font-medium text-[#12161D]">
+          <div class=" mr-auto text-[13px]">Amount</div>
+          <div class=" text-[#12161D] text-opacity-50 ml-2 sm:ml-4 mr-1 text-[10px] md:text-[13px]">Candy available:  </div>
+          <div class=" text-[10px] md:text-[13px]">2000 USDT</div>
         </div>
-        <div class="mt-4">
+        <div class="mt-2">
           <input type="text" class="w-full rounded-[27px] border-[1px] border-[#b7d2d6] text-[#12161d] text-xs p-3 appearance-none outline-none font-medium focus:border-[#FF00F5]">
         </div>
-        <div class="flex mt-[14px] text-[13px]">
+        <div class="flex mt-[14px] text-[13px] font-medium">
           <div class="text-[#12161D] mr-auto">
             You will receive:
           </div>
         </div>
-        <div class="flex mt-[14px] text-[13px]">
-          <div class="text-[#12161D] text-opacity-50 mr-auto">
+        <div class="flex mt-[14px] text-[13px] font-medium">
+          <div class="text-[#12161D] text-opacity-50 mr-auto ">
             paid:
           </div>
           <div class="">
@@ -49,7 +49,7 @@
           </div>
         </div>
 
-        <div class="flex mt-[10px] text-[13px]">
+        <div class="flex mt-[10px] text-[13px] font-medium">
           <div class="text-[#12161D] text-opacity-50 mr-auto">
             earned rewards:
           </div>
@@ -57,7 +57,7 @@
             55 GTON
           </div>
         </div>
-        <div class="flex mt-[10px] text-[13px] items-center">
+        <div class="flex mt-[10px] text-[13px] items-center font-medium">
           <div class="text-[#12161D] mr-auto">
             Total:
           </div>
@@ -67,7 +67,7 @@
         </div>
       </div>
     </div>
-      <div class="sm:flex mt-4 text-[10px]">
+      <div class="sm:flex mt-4 text-[10px] font-medium">
         <div class="text-[#12161D] text-opacity-50 mr-auto">
           Estemated transaction time:
         </div>
@@ -75,7 +75,7 @@
           ~ 5 minutes
         </div>
       </div>
-      <div class="sm:flex mt-2 text-[10px]">
+      <div class="sm:flex mt-2 text-[10px] font-medium">
         <div class="text-[#12161D] text-opacity-50 mr-auto">
           Estemated transaction fee:
         </div>

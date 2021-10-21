@@ -55,7 +55,7 @@
         transition-transform
       "
     >
-      <div class="container">
+      <div class="container h-full overflow-y-scroll">
         <div class="flex-shrink-0 flex justify-between items-center">
           <nuxt-link class="text-[46px]"
                      to="/"
@@ -68,9 +68,9 @@
               width="97"
             />
           </nuxt-link>
-          <div class="flex px-10">
+          <div class="flex pr-4 sm:px-10">
 
-            <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-4 py-3 mx-5">
+            <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-2 sm:px-4 py-3 mx-5">
               <img src="~/assets/img/interface/poligon.svg" width="100" height="25"
                    alt="poligon">
             </div>
@@ -106,23 +106,24 @@
           class="flex-shrink-0 h-[1px] w-full my-[13px]"
         ></div>
 
-        <div class="flex-grow flex flex-col overflow-auto">
-          <div class="mb-auto w-full pt-[40px]">
+        <div class="flex-grow flex flex-col">
+          <div class="mb-auto w-full pt-[13px] sm:pt-[40px] ">
             <div
               v-for="(item, key) in navigation"
               :key="key"
-              class="block mb-[23px]"
+              class="block mb-3"
             >
               <component-link
                 :class="{
                 'no-underline hover:underline': $route.name !== item.route,
                 'text-opacity-50 text-[16px]': !item.main,
+                'text-[22px] ': item.main,
               }"
                 :disabled="item.disabled"
                 :disabled-title="item.disabledTitle"
                 :href="item.href"
                 :route="item.route"
-                class="font-semibold text-[#12161D] text-[22px]"
+                class="font-semibold text-[#12161D] "
               >
                 {{ item.label }}
               </component-link>
@@ -131,8 +132,8 @@
 
         </div>
       </div>
-      <div class="h-full w-full text-[13px] font-sans text-sm mt-[50px] relative">
-        <div class="h-[140px] w-full absolute bottom-0 pt-10 pl-6" style="background: linear-gradient(260.18deg, #FB2EFF 24.15%, #7736FF 59.59%);">
+      <div class=" w-full h-[140px] text-[13px] font-sans text-sm mt-[50px] relative">
+        <div class=" w-full absolute bottom-0 pt-10 pl-6" style="background: linear-gradient(260.18deg, #FB2EFF 24.15%, #7736FF 59.59%);">
           <div class="flex w-full items-center">
             <div v-for="(social, socialKey) in socials"
                  :key="socialKey"
@@ -211,7 +212,6 @@ export default Vue.extend({
 .mobile-menu__close {
   @apply text-black top-[1.3rem] hover:text-magenta;
 }
-
 @media (min-width: 500px) {
   .mobile-menu__nav {
     @apply w-[400px];

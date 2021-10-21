@@ -4,26 +4,35 @@
       <span class="text-2xl font-bold mr-auto">
         Explore ⚡️
       </span>
-      <div class="">
+      <div class="select-none">
         <span class="">
-          <div class="dropdown rounded-[40px] border-[#D9DCE2] border-[1px] h-[38px] w-[143px] py-[7px] pl-[12px] sm:my-0 hover:cursor-pointer hover:border-magenta" @click="dropdown = !dropdown">
-            <span class="arrow text-sm" >All chains</span>
-            <div v-if="dropdown" class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px]">
+          <div :class="(dropdown) ? 'border-magenta' : ''"
+               class="dropdown rounded-[40px] border-[#D9DCE2] border-[1px] h-[38px] w-[143px] py-[7px] pl-[12px] sm:my-0 hover:cursor-pointer hover:border-magenta"
+               @click="dropdown = !dropdown">
+            <span class="arrow text-sm">All chains</span>
+            <div v-if="dropdown"
+                 class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px] ">
               <div>
                 <div class="flex text-magenta text-sm px-4 pt-3">
                   All chains
                 </div>
-                <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer hover:border-magenta">
-                  <img src="~/assets/img/interface/poligon.svg" width="100" height="25"
-                       alt="poligon">
+                <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer hover:border-magenta ">
+                  <img alt="poligon"
+                       height="25"
+                       src="~/assets/img/interface/poligon.svg"
+                       width="100">
                 </div>
                 <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer hover:border-magenta">
-                  <img src="~/assets/img/interface/etherium.svg" width="100" height="25"
-                       alt="etherium">
+                  <img alt="etherium"
+                       height="25"
+                       src="~/assets/img/interface/etherium.svg"
+                       width="100">
                 </div>
                 <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer hover:border-magenta">
-                  <img src="~/assets/img/interface/fantom.svg" width="100" height="25"
-                       alt="fantom">
+                  <img alt="fantom"
+                       height="25"
+                       src="~/assets/img/interface/fantom.svg"
+                       width="100">
                 </div>
               </div>
             </div>
@@ -47,7 +56,7 @@
         </span>
       </div>
     </div>
-    <div class="flex flex-wrap justify-center md:justify-between">
+    <div class="flex flex-wrap justify-center md:justify-start">
       <div class="flex m-[1rem] rounded-[23px] border-[1px] border-[#B85DFF] ">
         <div class="flex-col pt-6 pb-10 px-8 candy-bg-first">
           <div class="flex items-center  h-[46px] w-[236px] border-[1px] border-[#D9DCE2] rounded-[23px] bg-white mb-3 hover:border-[#FF00F5] hover:cursor-pointer">
@@ -221,7 +230,6 @@
         </div>
       </div>
 
-
       <div class="flex m-[1rem] rounded-[23px] border-[1px] border-[#B85DFF] ">
         <div class="flex-col pt-6 pb-10 px-8 candy-bg-first">
           <div class="flex items-center  h-[46px] w-[236px] border-[1px] border-[#D9DCE2] rounded-[23px] bg-white mb-3 hover:border-[#FF00F5] hover:cursor-pointer">
@@ -271,8 +279,10 @@
           <div class="flex items-center  h-[46px] w-[236px] border-[1px] border-[#D9DCE2] rounded-[23px] bg-white mb-3 hover:border-[#FF00F5] hover:cursor-pointer">
             <span class="flex px-1 pl-4">
               <div class="h-[30px] w-[30px] flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
-                <icon class="text-base"
-                      name="mono/aave"/>
+                <img alt=""
+                     height="16"
+                     src="~/assets/img/icons/aave.png"
+                     width="16">
               </div>
             </span>
             <span class="font-medium text-xl pl-2 text-[#FF00F5]">
@@ -394,7 +404,6 @@
           </div>
         </div>
       </div>
-
 
     </div>
     <div class="flex justify-center mt-[50px] mb-[30px]">

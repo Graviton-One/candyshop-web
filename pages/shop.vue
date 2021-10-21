@@ -17,7 +17,7 @@
     </div>
 
     <div class="flex flex-wrap justify-center md:justify-between">
-      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow">
+      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow z-10">
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
@@ -187,7 +187,7 @@
           </div>
         </div>
       </div>
-      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow">
+      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow z-10">
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
@@ -357,7 +357,7 @@
           </div>
         </div>
       </div>
-      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow">
+      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow z-10">
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
@@ -527,7 +527,7 @@
           </div>
         </div>
       </div>
-      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow">
+      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow z-10">
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
@@ -733,7 +733,7 @@
     </div>
 
     <div class="flex flex-wrap justify-center md:justify-between">
-      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow">
+      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow z-10">
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
@@ -903,7 +903,7 @@
           </div>
         </div>
       </div>
-      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow">
+      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow z-10">
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
@@ -1073,7 +1073,7 @@
           </div>
         </div>
       </div>
-      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow">
+      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow z-10">
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">
@@ -1243,7 +1243,7 @@
           </div>
         </div>
       </div>
-      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow">
+      <div class="flex m-[1rem] rounded-[23px] p-6 rainbow z-10">
         <div class="flex-col">
           <div class="flex bg-white rounded-t-xl items-center mb-[10px]">
             <div class="flex items-center justify-center h-[46px] w-[256px] ">

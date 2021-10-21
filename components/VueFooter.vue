@@ -1,10 +1,10 @@
 <template>
   <footer  style="background: linear-gradient(260.18deg, #FB2EFF 24.15%, #7736FF 59.59%);">
     <div class="container flex flex-wrap md:flex-nowrap justify-center">
-      <div class="flex md:mr-[90px]">
+      <div class="flex mt-[30px]">
         <img alt="CandyShop"
              class="w-[160px] h-[106px]"
-             src="~/assets/img/interface/logo_footer.svg">
+             src="~/assets/img/interface/logo.svg">
       </div>
 
       <div class="hidden lg:flex py-[50px] text-white leading-[26px] ">

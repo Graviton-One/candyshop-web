@@ -1,7 +1,7 @@
 <template>
   <modal name="select-network"
   @close="$store.commit('app/CLOSE_MODAL')">
-    <div class="relative h-full bg-white rounded-[23px]  py-[44px] px-[40px] sm:w-[610px]">
+    <div class="relative h-full bg-white rounded-[23px] min-h-[307px]  sm:py-[44px] p-6 sm:px-[40px] sm:min-w-[610px]">
 
       <button
         class="absolute z-10 right-[12px] top-[12px] bg-ghost-white text-vampire-black hover:text-[#FF00F5]  text-[12px] p-0 rounded-full w-[27px] h-[27px] flex items-center justify-center"
@@ -18,23 +18,23 @@
         class="mb-[18px] text-[13px] text-[#12161D] text-opacity-50 leading-none text-center font-medium text-center">
         You are in a polygon network
       </div>
-      <div class="flex rainbow rounded-[23px] justify-center">
+      <div class="flex  border-[1px] border-[#B85DFF]  rounded-[23px] justify-center">
         <div class="flex flex-wrap mx-[-15px] bg-dark-charcoal rounded-[10px] flex justify-center items-center p-[30px]">
           <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer"
                :class="(network === 'polygon') ?  'border-[#FF00F5]' : ''"
-               @click="selectNetwork('poligon')">
+               @click="SelectNetwork('poligon')">
             <img src="~/assets/img/interface/poligon.svg" width="100" height="25"
                  alt="poligon">
           </div>
           <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer"
                :class="(network === 'etherium') ?  'border-[#FF00F5]' : ''"
-               @click="selectNetwork('etherium')">
+               @click="SelectNetwork('etherium')">
             <img src="~/assets/img/interface/etherium.svg" width="100" height="25"
                  alt="etherium">
           </div>
           <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer"
                :class="(network === 'fantom') ?  'border-[#FF00F5]' : ''"
-               @click="selectNetwork('fantom')">
+               @click="SelectNetwork('fantom')">
             <img src="~/assets/img/interface/fantom.svg" width="100" height="25"
                  alt="fantom">
           </div>

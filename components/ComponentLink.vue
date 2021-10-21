@@ -40,6 +40,8 @@
       v-if="disabled && disabledTitle && interface"
       class="
       px-1
+      text-[10px]
+      font-normal
        text-magenta
       "
     >
@@ -69,6 +71,7 @@ export default Vue.extend({
       type: String,
       default: '',
     },
+
     interface: {
       type: Boolean,
       default: false,

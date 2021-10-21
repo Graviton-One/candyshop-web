@@ -32,10 +32,11 @@
         My candies
       </span>
     </div>
-    <div class="flex flex-wrap rainbow p-4 sm:p-10 rounded-[23px]  mb-[53px]">
+    <div class="flex flex-wrap  border-[1px] border-[#B85DFF]  p-4 sm:p-10 rounded-[23px]  mb-[53px]">
       <div class="flex w-full relative">
       <div class="flex w-full pb-2  overflow-x-scroll sm:overflow-x-auto">
         <table class="w-full min-w-[600px] mb-[70px]">
+          <thead>
           <tr class="border-b border-[#D9DCE2] h-[70px]">
             <th class="text-[#12161D] text-opacity-50 text-left"
                 width="5%">#
@@ -55,6 +56,8 @@
             <th class=""
                 width="5%"></th>
           </tr>
+          </thead>
+          <tbody>
           <tr class="border-b border-[#D9DCE2] h-[70px]">
             <td class="text-[#12161D] text-opacity-50">1</td>
             <td>
@@ -123,6 +126,7 @@
               </btn>
             </td>
           </tr>
+          </tbody>
         </table>
       </div>
         <div class="text-[#12161D] text-opacity-50 text-sm absolute bottom-[25px]">
@@ -130,7 +134,7 @@
           <a class="hover:no-underline underline"
              href="/">
             Etherscan
-            <icon class="text-base fill-current stroke-current text-[#12161D] "
+            <icon class="text-base  text-[#12161D] "
                   name="mono/goto"/>
           </a>
 
