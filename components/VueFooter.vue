@@ -4,7 +4,7 @@
       <div class="flex mt-[30px]">
         <img alt="CandyShop"
              class="w-[160px] h-[106px]"
-             src="~/assets/img/interface/logo.svg">
+             src="~/assets/img/icons/logo.png">
       </div>
 
       <div class="hidden lg:flex py-[50px] text-white leading-[26px] ">

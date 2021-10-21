@@ -5,41 +5,44 @@
         Explore ⚡️
       </span>
       <div class="select-none">
-        <span class="">
+        <div class="inline-flex">
 
-          <div class="dropdown rounded-[40px] border-[#D9DCE2] border-[1px] h-[38px] w-[143px] py-[7px] pl-[12px] sm:my-0 hover:cursor-pointer hover:border-magenta">
-            <button class="arrow text-sm">All chains</button>
-            <button
-              class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px] ">
+          <div class="dropdown">
+            <button class="arrow dropdown-title flex items-center text-sm  rounded-[40px] border-[#D9DCE2] border-[1px] h-[38px] w-full sm:w-[143px] py-[4px] pl-[12px] sm:my-0
+                hover:cursor-pointer hover:border-magenta">
+              All chains
+            </button>
+            <div
+              class="dropdown-content rounded-[11px] border-[#D9DCE2] border-[1px] w-[143px]" tabindex="0">
               <div>
                 <div class="flex text-magenta text-sm px-4 pt-3">
                   All chains
                 </div>
-                <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer hover:border-magenta "
+                <button class="flex items-center justify-center rounded-[40px] border-gray-300 border-[1px] w-[111px] h-[33px] m-[10px] hover:cursor-pointer hover:border-magenta "
                      @click="onfocus">
                   <img alt="poligon"
-                       height="25"
+                       height="23"
                        src="~/assets/img/interface/poligon.svg"
-                       width="100">
-                </div>
-                <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer hover:border-magenta"
+                       width="90">
+                </button>
+                <button class="flex items-center justify-center rounded-[40px] border-gray-300 border-[1px] w-[111px] h-[33px] m-[10px] hover:cursor-pointer hover:border-magenta "
                      @click="onfocus">
                   <img alt="etherium"
-                       height="25"
+                       height="23"
                        src="~/assets/img/interface/etherium.svg"
-                       width="100">
-                </div>
-                <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer hover:border-magenta"
+                       width="90">
+                </button>
+                <button class="flex items-center justify-center rounded-[40px] border-gray-300 border-[1px] w-[111px] h-[33px] m-[10px] hover:cursor-pointer hover:border-magenta "
                      @click="onfocus">
                   <img alt="fantom"
-                       height="25"
+                       height="23"
                        src="~/assets/img/interface/fantom.svg"
-                       width="100">
-                </div>
+                       width="90">
+                </button>
               </div>
-            </button>
+            </div>
           </div>
-        </span>
+        </div>
         <span class="text-[#12161d] text-xs font-medium">
           <button
             class="items-center"
@@ -424,13 +427,13 @@ export default Vue.extend({
   }),
   methods: {
     onfocus() {
-      document.activeElement.blur()
+      if (document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+      }
     },
     openBuyLP() {
       // Deep copy object
-      console.log('modal')
       const modal = JSON.parse(JSON.stringify(this.$store.getters["app/exampleModals"].buy));
-      console.log(modal)
       modal.data.callbackBuy = () => {
         this.$store.commit('app/CLOSE_MODAL')
       }

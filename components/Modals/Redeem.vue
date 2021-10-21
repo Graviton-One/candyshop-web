@@ -11,7 +11,7 @@
       </button>
 
      <div class="flex border-b border-[#D9DCE2] pb-4 sm:pb-[22px]">
-       <span class="flex">
+       <div class="flex">
          <div class="h-10 w-10 flex justify-center rounded-[40px] border-[1px] border-[#D9DCE2] items-center z-20 bg-white">
            <icon class="text-[22px]"
                  name="mono/gton"/>
@@ -20,7 +20,7 @@
            <icon class="text-[22px]"
                  name="mono/usdc"/>
          </div>
-       </span>
+       </div>
        <span class="font-medium text-[26px] pl-2 text-[#12161D]">
          canUSDC
        </span>

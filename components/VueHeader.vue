@@ -33,9 +33,9 @@
     <div class="block shadow-lg">
       <div class="container flex items-center">
         <div class="py-3 mr-auto lg:mr-0 order-1">
-          <img src="~/assets/img/interface/logo.svg"
+          <img src="~/assets/img/icons/logo.png"
                alt=""
-               class="md:mx-10">
+               class="md:mx-10 w-[98px] h-[57px]">
         </div>
 
         <div class="flex font-semibold lg:mr-auto lg:order-2 order-3 lg:ml-0 ml-2">
