@@ -22,19 +22,19 @@
         <div class="flex flex-wrap mx-[-15px] bg-dark-charcoal rounded-[10px] flex justify-center items-center p-[30px]">
           <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer"
                :class="(network === 'polygon') ?  'border-[#FF00F5]' : ''"
-               @click="SelectNetwork('poligon')">
+               @click="selectNetwork('poligon')">
             <img src="~/assets/img/interface/poligon.svg" width="100" height="25"
                  alt="poligon">
           </div>
           <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer"
                :class="(network === 'etherium') ?  'border-[#FF00F5]' : ''"
-               @click="SelectNetwork('etherium')">
+               @click="selectNetwork('etherium')">
             <img src="~/assets/img/interface/etherium.svg" width="100" height="25"
                  alt="etherium">
           </div>
           <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-[15px] h-[42px] m-[10px] hover:cursor-pointer"
                :class="(network === 'fantom') ?  'border-[#FF00F5]' : ''"
-               @click="SelectNetwork('fantom')">
+               @click="selectNetwork('fantom')">
             <img src="~/assets/img/interface/fantom.svg" width="100" height="25"
                  alt="fantom">
           </div>

@@ -9,7 +9,8 @@
 
           <div class="dropdown">
             <button class="arrow dropdown-title flex items-center text-sm  rounded-[40px] border-[#D9DCE2] border-[1px] h-[38px] w-full sm:w-[143px] py-[4px] pl-[12px] sm:my-0
-                hover:cursor-pointer hover:border-magenta">
+                hover:cursor-pointer hover:border-magenta"
+            @click="changeDrop">
               All chains
             </button>
             <div
@@ -426,6 +427,14 @@ export default Vue.extend({
     dropdown: false
   }),
   methods: {
+    changeDrop() {
+      if (this.dropdown === false) {
+        this.dropdown = true
+      } else {
+        this.dropdown = false
+        document.activeElement.blur();
+      }
+    },
     closeDropMenu() {
       if (document.activeElement instanceof HTMLElement) {
         document.activeElement.blur();
