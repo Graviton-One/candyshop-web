@@ -4,7 +4,7 @@
     :class="{
       'text-[13px]': size === 'medium',
       'text-[12px]': size === 'small',
-      'btn--disabled': blocking && selected == chain,
+      'btn--disabled': blocking ,
     }"
     @click="$emit('select', index, chain)"
   >
@@ -41,7 +41,7 @@
 <script lang="ts">
 // eslint-disable-next-line
 import Vue, { PropType } from 'vue'
-import { Chains } from './constants'
+
 
 export default Vue.extend({
   props: {
@@ -63,7 +63,7 @@ export default Vue.extend({
       default: 0,
     },
     chain: {
-      type: String as PropType<Chains>,
+      type: String ,
       default: '',
     },
     blocking: {

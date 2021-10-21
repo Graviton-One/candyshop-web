@@ -17,9 +17,9 @@
             <div
               class="dropdown-content overflow-hidden rounded-[11px] border-[#D9DCE2] border-[1px] w-[143px]" tabindex="0">
               <div>
-                <div class="flex text-magenta text-sm px-4 pt-3">
+                <button class="flex text-magenta text-sm px-4 pt-3 no-underline hover:underline" @click="closeDropMenu">
                   All chains
-                </div>
+                </button>
                 <button class="flex items-center justify-center rounded-[40px] border-gray-300 border-[1px] w-[111px] h-[33px] m-[10px] hover:cursor-pointer hover:border-magenta "
                         @click="closeDropMenu">
                   <img alt="poligon"
@@ -63,7 +63,7 @@
         </span>
       </div>
     </div>
-    <div class="flex flex-wrap justify-center md:justify-start">
+    <div class="flex flex-wrap justify-center">
       <div class="flex m-[1rem] rounded-[23px] border-[1px] border-[#B85DFF] ">
         <div class="flex-col pt-6 pb-10 px-8 candy-bg-first">
           <div class="flex items-center  h-[46px] w-[236px] border-[1px] border-[#D9DCE2] rounded-[23px] bg-white mb-3 hover:border-[#FF00F5] hover:cursor-pointer">

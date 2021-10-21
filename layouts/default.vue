@@ -4,6 +4,7 @@
     <mobile-menu-interface />
 
     <main class="flex-grow relative z-[1]">
+
       <nuxt />
     </main>
     <modals-connect-wallet />

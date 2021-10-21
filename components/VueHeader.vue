@@ -77,14 +77,14 @@
 
         <div v-if="connected"
              class="hidden sm:flex lg:order-3 order-2 items-center">
-          <div class="flex items-center  text-xs ">
-            <span class="p-2 text-[#12161D]">Balance:</span>
-            <span class="font-semibold text-[#12161D]">10 LPs</span>
-            <span class="font-semibold text-[#12161D] text-opacity-50"> | $186,0000</span>
+          <div class="flex flex-wrap lg:flex-nowrap items-center whitespace-nowrap text-xs ">
+            <div class="p-2 text-[#12161D] md:w-full lg:w-auto ">Balance:</div>
+            <div class="font-semibold text-[#12161D]">10 LPs</div>
+            <div class="font-semibold text-[#12161D] text-opacity-50"> | $186,0000</div>
           </div>
 
           <div :class="(network === 'etherium') ?  'border-[#FF00F5]' : ''"
-               class="flex items-center rounded-[40px] border-[#D9DCE2] border-[1px] px-2 h-[42px] mx-5 my-4 sm:my-0 hover:cursor-pointer hover:border-magenta"
+               class="flex items-center rounded-[40px] border-[#D9DCE2] border-[1px] px-2 w-[118px] h-[42px] mx-5 my-4 sm:my-0 hover:cursor-pointer hover:border-magenta"
                @click="openSelectNetwork"
           >
             <img alt="etherium"

@@ -68,7 +68,7 @@
               width="97"
             />
           </nuxt-link>
-          <div class="flex pr-4 sm:px-10">
+          <div class="flex pr-6 sm:px-10">
 
             <div class="flex items-center rounded-[40px] border-gray-300 border-[1px] px-2 sm:px-4 py-3 mx-5">
               <img src="~/assets/img/interface/poligon.svg" width="100" height="25"
