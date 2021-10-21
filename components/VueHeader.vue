@@ -78,7 +78,7 @@
         <div v-if="connected"
              class="hidden sm:flex lg:order-3 order-2 items-center">
           <div class="flex flex-wrap lg:flex-nowrap items-center whitespace-nowrap text-xs ">
-            <div class="p-2 text-[#12161D] md:w-full lg:w-auto ">Balance:</div>
+            <div class="lg:p-2 text-[#12161D] md:w-full lg:w-auto ">Balance:</div>
             <div class="font-semibold text-[#12161D]">10 LPs</div>
             <div class="font-semibold text-[#12161D] text-opacity-50"> | $186,0000</div>
           </div>
