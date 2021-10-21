@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="flex pt-8 pb-4">
-      <span class="text-2xl font-bold mr-auto">
+      <span v-click-outside="onClickOutside" class="text-2xl font-bold mr-auto">
         Explore ⚡️
       </span>
       <div class="select-none">
@@ -418,7 +418,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 
 export default Vue.extend({
@@ -434,6 +434,9 @@ export default Vue.extend({
         this.dropdown = false
         document.activeElement.blur();
       }
+    },
+    onClickOutside(){
+      console.log('onClickOutside')
     },
     closeDropMenu() {
       if (document.activeElement instanceof HTMLElement) {
