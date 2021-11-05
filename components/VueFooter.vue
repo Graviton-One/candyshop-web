@@ -62,7 +62,7 @@
         </div>
       </div>
       <div class="flex items-center">
-        <div class="text-white text-xs font-medium">© 2021 Candy Shop</div>
+        <div class="text-white text-xs font-medium">© 2021 Candy Shop | info@candydapp.com</div>
       </div>
     </div>
   </footer>
