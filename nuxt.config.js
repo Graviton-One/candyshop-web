@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'Candy Shop',
     htmlAttrs: {
-      lang: "en-US"
+      lang: 'en-US',
     },
     meta: [
       { charset: 'utf-8' },
@@ -17,22 +17,20 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
-        rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@400;500;700&display=swap"
-      }
-    ]
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@400;500;700&display=swap',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    './assets/css/app.pcss',
-  ],
+  css: ['./assets/css/app.pcss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/click-outside.js', mode: 'client' },
     { src: '~/plugins/facebook.js', mode: 'client' },
+    { src: '~/plugins/gtag.ts', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -54,8 +52,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    ["nuxt-rfg-icon", { masterPicture: "static/favicon.png" }],
-    "@nuxtjs/manifest",
+    ['nuxt-rfg-icon', { masterPicture: 'static/favicon.png' }],
+    '@nuxtjs/manifest',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://www.npmjs.com/package/@nuxtjs/svg-sprite
@@ -68,8 +66,8 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
-    }
+      lang: 'en',
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -84,9 +82,9 @@ export default {
           propList: ['*'],
           minPixelValue: 4,
         },
-        'autoprefixer': {},
-      }
-    }
+        autoprefixer: {},
+      },
+    },
   },
 
   tailwindcss: {
@@ -94,10 +92,10 @@ export default {
   },
 
   optimizedImages: {
-    optimizeImages: true
+    optimizeImages: true,
   },
 
   storybook: {
     // Options
-  }
+  },
 }
