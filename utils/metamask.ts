@@ -1,6 +1,13 @@
 import { AbiItem } from 'web3-utils'
 import Web3 from 'web3'
 
+/**
+ * ABI imports
+ */
+import ERC20 from '~/abis/ERC20.json'
+import Can from '~/abis/Can.json'
+import { TokenAmount } from './safe-math'
+
 declare global {
   interface Window {
     ethereum: any
@@ -23,6 +30,7 @@ export type MetamaskChain = {
   img: string
   blockExplorerUrls: Array<string>
 }
+
 export enum Chains {
   Eth = '1', // eth
   Bsc = '56', // bsc
@@ -111,49 +119,70 @@ const hexToChainMap: { [key: string]: Chains } = {
 
 export class Invoker {
   async switchMetamaskNetwork(chain: MetamaskChain) {
-    let {
-      chainIdHex,
-      chainName,
-      rpcUrls,
-      nativeCurrency,
-      blockExplorerUrls
-    } = chain;
+    let { chainIdHex, chainName, rpcUrls, nativeCurrency, blockExplorerUrls } =
+      chain
     if (chainIdHex == availableChains[Chains.Eth].chainIdHex) {
       await window.ethereum.request({
-        method: "wallet_switchEthereumChain",
+        method: 'wallet_switchEthereumChain',
         params: [
           {
-            chainId: chainIdHex
-          }
-        ]
-      });
-      return;
+            chainId: chainIdHex,
+          },
+        ],
+      })
+      return
     }
 
     await window.ethereum.request({
-      method: "wallet_addEthereumChain",
+      method: 'wallet_addEthereumChain',
       params: [
         {
           chainId: chainIdHex,
           chainName,
           rpcUrls,
           nativeCurrency,
-          blockExplorerUrls
-        }
-      ]
-    });
+          blockExplorerUrls,
+        },
+      ],
+    })
   }
   async getNetworkVersion(): Promise<Chains> {
     let res = await window.ethereum.request({ method: 'eth_chainId' })
-    return hexToChainMap[res];
+    return hexToChainMap[res]
   }
   async resolveCurrentAddress() {
-      await window.ethereum.enable()
-      const addressList = await window.ethereum.request({
-        method: 'eth_accounts',
-      })
-      return addressList[0].toLowerCase()
-    }
+    await window.ethereum.enable()
+    const addressList = await window.ethereum.request({
+      method: 'eth_accounts',
+    })
+    return addressList[0].toLowerCase()
+  }
+  async approveToken(
+    web3: Web3,
+    token: string,
+    lockAddress: string,
+    amount: string
+  ) {
+    let contract = new web3.eth.Contract(ERC20 as AbiItem[], token)
+    await contract.methods
+      .approve(lockAddress, amount)
+      .send({ from: await this.resolveCurrentAddress() })
+  }
+  async tokenBalanceAndDecimals(
+    web3: Web3,
+    token: string,
+    userAddress: string
+  ): Promise<{ amount: TokenAmount; decimals: number }> {
+    let contract = new web3.eth.Contract(ERC20 as AbiItem[], token)
+    const decimals = await contract.methods.decimals.call().call()
+    const res = await contract.methods.balanceOf(userAddress).call()
+    return { amount: new TokenAmount(res, decimals), decimals: decimals }
+  }
+  async mintCan(web3: Web3, canAddress: string, amount: string) {
+    let contract = new web3.eth.Contract(Can as AbiItem[], canAddress)
+    const from = await this.resolveCurrentAddress()
+    await contract.methods.mintFor(from, amount).send({ from })
+  }
 }
 
 export class Web3WalletConnector {
@@ -165,4 +194,8 @@ export class Web3WalletConnector {
     }
     return false
   }
+}
+
+export function toPlainString(num: number): string {
+  return num.toLocaleString('fullwide', { useGrouping: false })
 }
