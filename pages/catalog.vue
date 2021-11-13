@@ -7,38 +7,26 @@
       <div class="select-none">
         <div class="inline-flex">
 
-          <div class="dropdown " :class="dropdown ? 'active' : ''"
-               v-click-outside="onClickOutside" >
+          <div class="dropdown " v-click-outside="onClickOutside" :class="dropdown ? 'active' : ''"
+                >
             <button class="arrow dropdown-title flex items-center text-sm  rounded-[40px] border-[#D9DCE2] border-[1px] h-[38px] w-full w-[143px] py-[4px] pl-[12px] sm:my-0
                 hover:cursor-pointer hover:border-magenta"
             @click="dropdown = !dropdown">
-              All chains
+              {{choosenOption}}
             </button>
             <div
               class="dropdown-content overflow-hidden rounded-[11px] border-[#D9DCE2] border-[1px] w-[143px]" tabindex="0">
               <div>
-                <button class="flex text-magenta text-sm px-4 pt-3 no-underline hover:underline" @click="closeDropMenu">
+                <button class="flex text-magenta text-sm px-4 pt-3 no-underline hover:underline" @click="closeDropMenu(types.All, 'All chains')">
                   All chains
                 </button>
-                <button class="flex items-center justify-center rounded-[40px] border-gray-300 border-[1px] w-[111px] h-[33px] m-[10px] hover:cursor-pointer hover:border-magenta "
-                        @click="closeDropMenu">
-                  <img alt="poligon"
+                <button v-for="item in chains" 
+                  :key="item.id"
+                  class="flex items-center justify-center rounded-[40px] border-gray-300 border-[1px] w-[111px] h-[33px] m-[10px] hover:cursor-pointer hover:border-magenta "
+                        @click="closeDropMenu(item.id, item.alt)">
+                  <img :alt="item.alt"
                        height="23"
-                       src="~/assets/img/interface/poligon.svg"
-                       width="90">
-                </button>
-                <button class="flex items-center justify-center rounded-[40px] border-gray-300 border-[1px] w-[111px] h-[33px] m-[10px] hover:cursor-pointer hover:border-magenta "
-                     @click="closeDropMenu">
-                  <img alt="etherium"
-                       height="23"
-                       src="~/assets/img/interface/etherium.svg"
-                       width="90">
-                </button>
-                <button class="flex items-center justify-center rounded-[40px] border-gray-300 border-[1px] w-[111px] h-[33px] m-[10px] hover:cursor-pointer hover:border-magenta "
-                     @click="closeDropMenu">
-                  <img alt="fantom"
-                       height="23"
-                       src="~/assets/img/interface/fantom.svg"
+                       :src="item.img"
                        width="90">
                 </button>
               </div>
@@ -419,21 +407,40 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Vue from 'vue'
+import {chains} from "~/components/common"
+import { Chains } from '~/utils/metamask'
+
+enum Catalog {
+  All = 0
+}
+/**
+ * The point is to connect chain types and type "all"
+ * in one enum
+ */
+type CatalogTypes = Catalog | Chains;
+const types = {...Catalog, ...Chains};
 
 export default Vue.extend({
   data: () => ({
     apy: 'asc',
-    dropdown: false
+    chains,
+    types,
+    dropdown: false,
+    choosenOption: "All chains",
+    catalogType: types.All as CatalogTypes
   }),
   methods: {
     onClickOutside(){
+      // @ts-ignore
       if (!document.activeElement.className.includes('dropdown')) {
         this.dropdown = false
       }
     },
-    closeDropMenu() {
+    closeDropMenu(id: CatalogTypes, text: string) {
+      this.catalogType = id;
+      this.choosenOption = text
       this.dropdown = false
     },
     openBuyLP() {
