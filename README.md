@@ -1,4 +1,4 @@
-# graviton-web-morpha-alpha
+# CandyShop
 
 ## Build Setup
 
