@@ -438,7 +438,7 @@
                   <img
                     src="~/assets/img/interface/binance.svg"
                     alt=""
-                    class="-[58px] h-[15px] md:w-[71px] md:h-[26px]"
+                    class="-[150px] h-[100px] md:w-[500px] md:h-[202px]"
                   />
                 </span>
               </li>
@@ -458,7 +458,7 @@
                   <img
                     src="~/assets/img/interface/avalanche.svg"
                     alt=""
-                    class="-[58px] h-[15px] md:w-[77px] md:h-[26px]"
+                    class="-[70px] h-[100px] md:w-[150px] md:h-[40px]"
                   />
                 </span>
               </li>
@@ -498,7 +498,7 @@
                   <img
                     src="~/assets/img/interface/solana.svg"
                     alt=""
-                    class="-[58px] h-[15px] md:w-[77px] md:h-[26px]"
+                    class="-[70px] h-[15px] md:w-[150px] md:h-[400px]"
                   />
                 </span>
               </li>
@@ -518,7 +518,7 @@
                   <img
                     src="~/assets/img/interface/okexchain.png"
                     alt=""
-                    class="-[58px] h-[15px] md:w-[77px] md:h-[26px]"
+                    class="-[90px] h-[15px] md:w-[125px] md:h-[25px]"
                   />
                 </span>
               </li>
