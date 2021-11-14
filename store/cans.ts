@@ -33,6 +33,7 @@ const defaultCan: Can = {
   pool_id: 24,
   pool_meta: {
     token_img: 'ftm',
+    native: true,
     token_pair_name: 'FTM',
     candy_picture: 'usdt',
   },

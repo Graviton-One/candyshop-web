@@ -2,7 +2,7 @@ import { Plugin } from '@nuxt/types'
 import Web3 from 'web3'
 const { HttpProvider } = Web3.providers;
 
-export async function createWeb3Instance(rpcUrl: string) {
+export function createWeb3Instance(rpcUrl: string) {
   return new Web3(new HttpProvider(rpcUrl));
 }
 

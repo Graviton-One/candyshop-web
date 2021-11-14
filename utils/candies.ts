@@ -14,6 +14,7 @@ interface PoolMeta {
   token_pair_name: string
   candy_picture: string
   token_img: string
+  native: boolean;
 }
 export type Can = {
   apy: string

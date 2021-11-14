@@ -96,8 +96,6 @@
               <div class="dropdown w-full sm:w-auto">
                 <button
                   class="
-                    arrow
-                    dropdown-title
                     flex
                     items-center
                     text-sm
@@ -109,7 +107,6 @@
                     py-[4px]
                     pl-[12px]
                     sm:my-0
-                    hover:cursor-pointer hover:border-magenta
                   "
                 >
                   <span
@@ -200,7 +197,7 @@
                 focus:border-[#FF00F5]
               "
               type="text"
-              :readonly="processing"
+              :readonly="processing || status == Status.Send"
             />
           </div>
         </div>
@@ -260,6 +257,7 @@ import { TokenAmount } from '~/utils/safe-math'
 import { Invoker, toPlainString } from '~/utils/metamask'
 import { WalletBody } from '~/store/wallet'
 import logger from '~/utils/logger'
+import { createWeb3Instance } from '~/plugins/web3'
 
 const invoker = new Invoker()
 enum Status {
@@ -271,7 +269,7 @@ export default Vue.extend({
     connected: false,
     processing: false,
     decimals: 18,
-    tokenBalance: new TokenAmount(0),
+    tokenBalance: new TokenAmount(0, 18),
     dropdown: false,
     status: Status.Approve,
     Status,
@@ -324,13 +322,23 @@ export default Vue.extend({
   },
   methods: {
     async setBalance() {
-      const { amount, decimals } = await invoker.tokenBalanceAndDecimals(
-        this.$web3,
+      let amount;
+      let decimals
+      if(this.can.pool_meta.native) {
+      ({ amount, decimals } = await invoker.nativeTokenBalance(
+        createWeb3Instance(this.can.rpc_url),
+        this.currentWallet.address
+      ))
+      } else {
+      ({ amount, decimals } = await invoker.tokenBalanceAndDecimals(
+        createWeb3Instance(this.can.rpc_url),
         this.can.token_a_address,
         this.currentWallet.address
-      )
+      ))
+      }
       this.tokenBalance = amount
-      this.decimals = decimals
+      this.decimals = Number(decimals)
+
     },
     async approve() {
       if (!this.amount) return
@@ -348,8 +356,8 @@ export default Vue.extend({
         this.status = Status.Send
       } catch (e) {
         logger(e)
-        this.processing = false
       }
+      this.processing = false
     },
     onClickOutside() {
       // @ts-ignore

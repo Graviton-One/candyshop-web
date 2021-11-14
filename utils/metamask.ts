@@ -39,6 +39,7 @@ export enum Chains {
   Heco = '128',
   Avax = '43114',
   Pol = '137',
+  Okex = '66',
 }
 
 export const availableChains: { [key in Chains]: MetamaskChain } = {
@@ -50,6 +51,15 @@ export const availableChains: { [key in Chains]: MetamaskChain } = {
     nativeCurrency: { name: 'ETH', decimals: 18, symbol: 'ETH' },
     img: '/img/bridge/chains/ethereum.svg',
     blockExplorerUrls: ['https://etherscan.io'],
+  },
+  [Chains.Okex]: {
+    chainId: 66,
+    chainIdHex: '0x1',
+    chainName: 'OKExChain',
+    rpcUrls: ['https://exchainrpc.okex.org'],
+    nativeCurrency: { name: 'OKT', decimals: 18, symbol: 'OKT' },
+    img: '/img/bridge/chains/ethereum.svg',
+    blockExplorerUrls: ['https://www.oklink.com/okexchain'],
   },
   [Chains.Pol]: {
     chainId: 137,
@@ -176,7 +186,17 @@ export class Invoker {
     let contract = new web3.eth.Contract(ERC20 as AbiItem[], token)
     const decimals = await contract.methods.decimals.call().call()
     const res = await contract.methods.balanceOf(userAddress).call()
-    return { amount: new TokenAmount(res, decimals), decimals: decimals }
+    return {
+      amount: new TokenAmount(res, Number(decimals)),
+      decimals: decimals,
+    }
+  }
+  async nativeTokenBalance(
+    web3: Web3,
+    address: string
+  ): Promise<{ amount: TokenAmount; decimals: number }> {
+    const balance = await web3.eth.getBalance(address)
+    return { amount: new TokenAmount(balance, 18), decimals: 18 }
   }
   async mintCan(web3: Web3, canAddress: string, amount: string) {
     let contract = new web3.eth.Contract(Can as AbiItem[], canAddress)

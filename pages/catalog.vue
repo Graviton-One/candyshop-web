@@ -254,6 +254,7 @@ export default Vue.extend({
         opts.chain = chainQuery[this.catalogType] || '0'
       }
       this.cans = await getCans(_.isEmpty(opts) ? opts : undefined)
+      this.loaded = true;
     },
     onClickOutside() {
       // @ts-ignore
