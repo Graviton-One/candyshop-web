@@ -8,7 +8,10 @@ interface State {
 
 export const state = () => {
   return {
-    processingCan: {} as Can,
+    processingCan: {
+      pool_meta: {},
+      chain_meta: {}
+    } as Can,
   }
 }
 

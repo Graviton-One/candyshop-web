@@ -274,6 +274,7 @@ export default Vue.extend({
     tokenBalance: new TokenAmount(0),
     dropdown: false,
     status: Status.Approve,
+    Status,
     amount: null as null | number,
     weiToSend: '',
   }),
