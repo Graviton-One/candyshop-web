@@ -58,7 +58,7 @@ export const availableChains: { [key in Chains]: MetamaskChain } = {
     chainName: 'OKExChain',
     rpcUrls: ['https://exchainrpc.okex.org'],
     nativeCurrency: { name: 'OKT', decimals: 18, symbol: 'OKT' },
-    img: '/img/bridge/chains/ethereum.svg',
+    img: '~/assets/sprite/svg/tokens/okex.svg',
     blockExplorerUrls: ['https://www.oklink.com/okexchain'],
   },
   [Chains.Pol]: {

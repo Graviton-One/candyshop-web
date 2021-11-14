@@ -1,6 +1,6 @@
 import { Chains } from './metamask'
 import { TokenAmount } from './safe-math'
-import Big from 'big.js'
+
 interface ChainMeta {
   chain_icon: string
   chain_id: 250

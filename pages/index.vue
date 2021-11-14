@@ -376,7 +376,7 @@
                   "
                 >
                   <img
-                    src="~/assets/img/landing/quickswap.svg"
+                    src="~/assets/img/interface/etherium.svg"
                     alt=""
                     class="w-[62px] h-[16px] md:w-[130px] md:h-[32px]"
                   />
@@ -396,7 +396,7 @@
                   "
                 >
                   <img
-                    src="~/assets/img/landing/sushiswap.svg"
+                    src="~/assets/img/interface/fantom.svg"
                     alt=""
                     class="-[58px] h-[15px] md:w-[120px] md:h-[31px]"
                   />
@@ -416,7 +416,7 @@
                   "
                 >
                   <img
-                    src="~/assets/img/landing/apeswap.svg"
+                    src="~/assets/img/interface/poligon.svg"
                     alt=""
                     class="-[58px] h-[15px] md:w-[125px] md:h-[27px]"
                   />
@@ -436,7 +436,7 @@
                   "
                 >
                   <img
-                    src="~/assets/img/landing/wault.png"
+                    src="~/assets/img/interface/binance.svg"
                     alt=""
                     class="-[58px] h-[15px] md:w-[71px] md:h-[26px]"
                   />
@@ -456,7 +456,67 @@
                   "
                 >
                   <img
-                    src="~/assets/img/landing/dfyn.svg"
+                    src="~/assets/img/interface/avalanche.svg"
+                    alt=""
+                    class="-[58px] h-[15px] md:w-[77px] md:h-[26px]"
+                  />
+                </span>
+              </li>
+              <li class="px-[3px] py-[5px] sm:px-[17px] sm:py-[8px]">
+                <span
+                  class="
+                    flex
+                    justify-center
+                    items-center
+                    w-[90px]
+                    h-[30px]
+                    md:w-[187px] md:h-[63px]
+                    bg-white
+                    rounded-[51px]
+                  "
+                >
+                  <img
+                    src="~/assets/img/interface/heco.svg"
+                    alt=""
+                    class="-[58px] h-[15px] md:w-[77px] md:h-[26px]"
+                  />
+                </span>
+              </li>
+              <li class="px-[3px] py-[5px] sm:px-[17px] sm:py-[8px]">
+                <span
+                  class="
+                    flex
+                    justify-center
+                    items-center
+                    w-[90px]
+                    h-[30px]
+                    md:w-[187px] md:h-[63px]
+                    bg-white
+                    rounded-[51px]
+                  "
+                >
+                  <img
+                    src="~/assets/img/interface/solana.svg"
+                    alt=""
+                    class="-[58px] h-[15px] md:w-[77px] md:h-[26px]"
+                  />
+                </span>
+              </li>
+              <li class="px-[3px] py-[5px] sm:px-[17px] sm:py-[8px]">
+                <span
+                  class="
+                    flex
+                    justify-center
+                    items-center
+                    w-[90px]
+                    h-[30px]
+                    md:w-[187px] md:h-[63px]
+                    bg-white
+                    rounded-[51px]
+                  "
+                >
+                  <img
+                    src="~/assets/img/interface/okexchain.png"
                     alt=""
                     class="-[58px] h-[15px] md:w-[77px] md:h-[26px]"
                   />
